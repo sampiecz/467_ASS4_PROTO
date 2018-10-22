@@ -12,5 +12,19 @@
         echo "Connection to database failed: " . $e->getMessage();
     }
 ?>
+<!-- End: Connect to database -->
 
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter artist first name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter artist middle name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Casper">
+  </div>
+
+
+    
 <?php include 'footer.html'; ?>
