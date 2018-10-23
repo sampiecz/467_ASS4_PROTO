@@ -66,7 +66,7 @@
                                   <img class="card-img-top" src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8584287da6fac5895bbe4fb80f9f5f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"/>
 								  <div class="card-body">
 									<h5 class="card-title">Create an event</h5>
-									<p class="card-text">Create an event and assign vendors, bands, and artists. See realtime ticket information and upate event the event status.</p>
+									<p class="card-text">Create an event and assign vendors, bands, and artists. See ticket information and event status.</p>
 									<a href="create_a_new_event.php" class="btn btn-primary">Create an event</a>
 								  </div>
 								</div>    
