@@ -47,7 +47,7 @@
                                   <img class="card-img-top" src="https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=309fe659f0d0e2a5b7408b7a756613c2&amp;dpr=1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80&amp;cs=tinysrgb"/>
 								  <div class="card-body">
 									<h5 class="card-title">Create an artist</h5>
-									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<p class="card-text">Create an artist and add it to your artist database. Assign them to events and log important information.</p>
 									<a href="create_a_new_artist.php" class="btn btn-primary">Create an artist</a>
 								  </div>
 								</div>    
@@ -56,7 +56,7 @@
 								<div class="card">
                                   <img class="card-img-top" src="https://images.unsplash.com/photo-1518552722618-737f6d8e91c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=20e3528b582270383b6b01e784e50c7c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"/>
 								  <div class="card-body">
-									<h5 class="card-title">Create a band</h5> <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<h5 class="card-title">Create a band</h5> <p class="card-text">Create a band and add it to your band database. Assign them to events and log important information.</p>
 									<a href="create_a_new_band.php" class="btn btn-primary">Create a band</a>
 								  </div>
 								</div>    
@@ -66,7 +66,7 @@
                                   <img class="card-img-top" src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8584287da6fac5895bbe4fb80f9f5f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"/>
 								  <div class="card-body">
 									<h5 class="card-title">Create an event</h5>
-									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<p class="card-text">Create an event and assign vendors, bands, and artists. See realtime ticket information and upate event the event status.</p>
 									<a href="create_a_new_event.php" class="btn btn-primary">Create an event</a>
 								  </div>
 								</div>    
@@ -94,7 +94,7 @@
 								<div class="card">
 								  <div class="card-body">
 									<h5 class="card-title">Approve an event</h5>
-									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<p class="card-text">Quickly and easily view all event information. Including but not limited to vendors, artists, and bands.</p>
 									<a href="create_a_new_artist.php" class="btn btn-primary">Approve an event</a>
 								  </div>
 								</div>    
