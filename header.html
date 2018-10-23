@@ -1,33 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Uh. It's a title. Not much more to say. -->
-        <title></title>
-        <!-- Uh. It's a description. Not much more to say. -->
-        <meta name="description" content="">
-        <!-- Hey Google & Bing, index us pls -->
-        <meta name="robots" content="all, index, follow">
-        <!-- Make the screen responsive accross different devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Include BS4 CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    </head>
-    <body>
-		<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-		  <h5 class="my-0 mr-md-auto font-weight-normal">OFNI</h5>
-		  <nav class="my-2 my-md-0 mr-md-3">
-			 <a class="p-2 text-dark" href="#">Approve</a>
-			 <div class="dropdown">
-			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-			    Create	
-			  </button>
-			  <div class="dropdown-menu">
-				<a class="dropdown-item" href="create_a_new_artist.php">Create Artist</a>
-				<a class="dropdown-item" href="create_a_new_band.php">Create Band</a>
-				<a class="dropdown-item" href="create_a_new_event.php">Create Event</a>
-			  </div>
-			</div> 
-			<a class="p-2 text-dark" href="about.php">About</a>
-		  </nav>
-		</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OFNI</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">OFNI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+				<div class="dropdown">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Create</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="create_a_new_artist.php">Create Artist</a>
+						<a class="dropdown-item" href="create_a_new_band.php">Create Band</a>
+						<a class="dropdown-item" href="create_a_new_event.php">Create Event</a>
+					</div>
+				</div>
+            </li>
+			<li class="nav-item">
+				<div class="dropdown">
+					<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Approve</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="approve_event.php">Approve event</a>
+					</div>
+				</div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" style="padding-top: 100px;">
 
