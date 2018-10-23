@@ -22,7 +22,7 @@
                       <div class="container">
                         <div class="bg-text">
                             <h1 class="display-4">Event management simplified</h1>
-                            <p class="lead" style="color: white;">Empowering you to better manage events and focus on what matters.</p>
+                            <p class="lead" style="color: white;">Empowering you to better manage events and focus on what matters</p>
                         </div>
                       </div>
                     </div>
