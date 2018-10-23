@@ -73,4 +73,33 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="row">
+				<div class="col-12">
+					<div class="jumbotron jumbotron-fluid outlier-jumbo">
+                      <div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h2>Approve</h2>
+								<hr>
+							</div>
+							<div class="col-12">
+								<div class="card">
+								  <div class="card-body">
+									<h5 class="card-title">Approve events</h5>
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<a href="create_a_new_artist.php" class="btn btn-primary">Approve event</a>
+								  </div>
+								</div>    
+							</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+    </section>
+
+
 <?php include 'footer.html'; ?>
