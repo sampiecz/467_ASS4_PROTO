@@ -33,11 +33,11 @@
                     <form method="post" action="">
                       <div class="form-group">
                         <label for="exampleFormControlInput1">Enter band name</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John">
                       </div>
                       <div class="form-group">
                         <label for="exampleFormControlInput1">Enter band name</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Casper">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Casper">
                       </div>
                       <div class="form-group">
                         <button type="submit" class="btn btn-success">Create band</button>

@@ -1,14 +1,32 @@
+/* outline an object */
 .outline
 {
-    position: relative;
-    padding: .75rem 1.25rem;
-    margin-bottom: 1rem;
     border: 1px solid lightgray;
-    border-radius: .25rem;
 }
 
+/* Make a jumbotron not have excessive padding on top if it's an outlier */
 .outlier-jumbo
 {
     padding: 3rem 2rem;
 }
 
+/* Make the jumbotron have the same styling as the other elements, curved */
+.jumbotron
+{
+    border-radius: .3rem !important;
+}
+
+/* Make the cards not look close together on mobile */
+.card
+{
+    margin-top: 1rem !important;
+}
+
+/* Make the footer stay at the bottom of the page even if we don't 
+ * have enough content to fill up the main container on the page. */
+.flex-wrapper {
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    justify-content: space-between
+}
