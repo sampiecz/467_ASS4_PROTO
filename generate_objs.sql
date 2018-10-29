@@ -16,14 +16,14 @@ DROP TABLE IF EXISTS Event;
 CREATE TABLE Artist 
 (
     artistId integer AUTO_INCREMENT,
-    name Char(255) NOT NULL, middleN Char(255) NOT NULL, lastN Char(255) NOT NULL, gender Char(20) NOT NULL, email Char(255) NOT NULL, number Char(25) NOT NULL
+    name Char(255) NOT NULL, middle_Name Char(255) NOT NULL, last_Name Char(255) NOT NULL, gender Char(20) NOT NULL, email Char(255) NOT NULL, number Char(25) NOT NULL
     primary key (artistId)
 );
 
 CREATE TABLE Band 
 (
     bandId integer AUTO_INCREMENT,
-    name Char(255) NOT NULL, member Char(255) NOT NULL , rate Char(255)NOT NULL, blNumber Char(255) NOT NULL, aStreet Char(255) NOT NULL, aCity Char(255) NOT NULL, aState Char(255) NOT NULL, aZip Char(255) NOT NULL, aEmail Char(255) NOT NULL, aPhone Char(255) NOT NULL 
+    name Char(255) NOT NULL, member Char(255) NOT NULL , rate Char(255)NOT NULL, bl_Number Char(255) NOT NULL, ag_Street Char(255) NOT NULL, ag_City Char(255) NOT NULL, ag_State Char(255) NOT NULL, ag_Zip Char(255) NOT NULL, ag_Email Char(255) NOT NULL, ag_Phone Char(255) NOT NULL 
     primary key (bandId)
 );
 
