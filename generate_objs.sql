@@ -9,9 +9,9 @@
 # Purpose:                                                # 
 ###########################################################
 
+DROP TABLE IF EXISTS Event;
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Band;
-DROP TABLE IF EXISTS Event;
 
 CREATE TABLE Artist 
 (
