@@ -37,3 +37,30 @@ CREATE TABLE Event
     FOREIGN KEY (bandId) REFERENCES Band (bandId)
     FOREIGN KEY (artistId) REFERENCES Artist (artistId)
 );
+
+
+
+
+/*test values*/ 
+
+
+INSERT INTO Artist (name, middle_name, last_name, gender, email, number) VALUES
+('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
+('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
+('Mad', 'R', 'Keymentz', 'W', 'sarah@gmail.com', '6303629087');
+
+
+INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone) VALUES
+('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
+('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
+('Mad', 'R', 'Keymentz', 'W', 'sarah@gmail.com', '6303629087');
+
+
+
+
+
+
+
+
+
+
