@@ -16,14 +16,14 @@ DROP TABLE IF EXISTS Event;
 CREATE TABLE Artist 
 (
     artistId integer AUTO_INCREMENT,
-    name Char(255) NOT NULL, middle_Name Char(255) NOT NULL, last_Name Char(255) NOT NULL, gender Char(20) NOT NULL, email Char(255) NOT NULL, number Char(25) NOT NULL
+    name Char(255) NOT NULL, middle_Name Char(255) NOT NULL, last_Name Char(255) NOT NULL, gender Char(20) NOT NULL, email Char(255) NOT NULL, number Char(25) NOT NULL,
     primary key (artistId)
 );
 
 CREATE TABLE Band 
 (
     bandId integer AUTO_INCREMENT,
-    name Char(255) NOT NULL, member Char(255) NOT NULL , rate Char(255)NOT NULL, bl_Number Char(255) NOT NULL, ag_Street Char(255) NOT NULL, ag_City Char(255) NOT NULL, ag_State Char(255) NOT NULL, ag_Zip Char(255) NOT NULL, ag_Email Char(255) NOT NULL, ag_Phone Char(255) NOT NULL 
+    name Char(255) NOT NULL, member Char(255) NOT NULL , rate Char(255)NOT NULL, bl_Number Char(255) NOT NULL, ag_Street Char(255) NOT NULL, ag_City Char(255) NOT NULL, ag_State Char(255) NOT NULL, ag_Zip Char(255) NOT NULL, ag_Email Char(255) NOT NULL, ag_Phone Char(255) NOT NULL, 
     primary key (bandId)
 );
 
@@ -38,12 +38,7 @@ CREATE TABLE Event
     FOREIGN KEY (artistId) REFERENCES Artist (artistId)
 );
 
-
-
-
 /*test values*/ 
-
-
 INSERT INTO Artist (name, middle_name, last_name, gender, email, number) VALUES
 ('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
 ('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
@@ -51,10 +46,8 @@ INSERT INTO Artist (name, middle_name, last_name, gender, email, number) VALUES
 
 
 INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone) VALUES
-('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
-('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
-('Mad', 'R', 'Keymentz', 'W', 'sarah@gmail.com', '6303629087');
-
+('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),
+('Sam', 'West', '500', '3453334323', 'idc ave', 'Lisle', 'OK', '56044', '12345', 'fuck@gmail.com', '4561234567');
 
 
 
