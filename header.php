@@ -25,6 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+<<<<<<< HEAD:header.php
               <a class="btn btn-secondary" href="index.php">Home</a>
             </li>
             <li class="nav-item">
@@ -36,6 +37,9 @@
 						<a class="dropdown-item" href="coo_login.php">COO Login</a>
 					</div>
 				</div>
+=======
+              <a class="btn btn-secondary" href="index.php">Name</a>
+>>>>>>> 188d8cfe2e5cdc62d4dd0db6203c073c37498f66:header.html
             </li>
             <li class="nav-item">
 				<div class="dropdown">
