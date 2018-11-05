@@ -35,7 +35,7 @@
 								  <div class="card-body">
 									<h5 class="card-title">Create an artist</h5>
 									<p class="card-text">Create an artist and add it to your artist database. Assign them to events and log important information.</p>
-									<a href="create_a_new_artist.php" class="btn btn-primary">Create an artist</a>
+									<a href="login.php" class="btn btn-primary">Create an artist</a>
 								  </div>
 								</div>    
 							</div>
@@ -44,7 +44,7 @@
                                   <img class="card-img-top" src="https://images.unsplash.com/photo-1518552722618-737f6d8e91c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=20e3528b582270383b6b01e784e50c7c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"/>
 								  <div class="card-body">
 									<h5 class="card-title">Create a band</h5> <p class="card-text">Create a band and add it to your band database. Assign them to events and log important information.</p>
-									<a href="create_a_new_band.php" class="btn btn-primary">Create a band</a>
+									<a href="login.php" class="btn btn-primary">Create a band</a>
 								  </div>
 								</div>    
 							</div>
@@ -54,7 +54,7 @@
 								  <div class="card-body">
 									<h5 class="card-title">Create an event</h5>
 									<p class="card-text">Create an event and assign vendors, bands, and artists. See ticket information and event status.</p>
-									<a href="create_a_new_event.php" class="btn btn-primary">Create an event</a>
+									<a href="login.php" class="btn btn-primary">Create an event</a>
 								  </div>
 								</div>    
 							</div>
@@ -82,7 +82,7 @@
 								  <div class="card-body">
 									<h5 class="card-title">Approve an event</h5>
 									<p class="card-text">Quickly and easily view all event information. Including but not limited to vendors, artists, and bands.</p>
-									<a href="create_a_new_artist.php" class="btn btn-primary">Approve an event</a>
+									<a href="login.php" class="btn btn-primary">Approve an event</a>
 								  </div>
 								</div>    
 							</div>
