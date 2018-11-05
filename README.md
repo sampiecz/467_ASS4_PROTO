@@ -1,9 +1,9 @@
 # Need to do / Verify we have
 ## These are notes I took while at the TA's office hours.
-- [ ] Login event manager
-- [ ] Event staff
-- [ ] CO
-- [ ] One dropdown
+- [X] Login event manager
+- [X] Event staff
+- [X] CO
+- [X] One dropdown
 - [ ] Three different dashboard
 - [ ] Event staff will have create artist band and agent
 - [ ] Event manager will have approve event and detailed report
