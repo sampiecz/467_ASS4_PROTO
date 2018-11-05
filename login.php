@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>COO Login</h1>
+                        <h1>Login</h1>
                         <hr>
                     </div>
                 </div>
@@ -15,14 +15,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form method="post" action="">
+                        <form method="post" action="dashboard.php">
                           <div class="form-group">
                             <label for="exampleFormControlInput1">Enter username</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" class="form-control" name="username">
                           </div>
                           <div class="form-group">
                             <label for="exampleFormControlInput1">Enter password</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                            <input type="password" class="form-control" name="password">
                           </div>
                           <div class="form-group">
                             <button type="submit" class="btn btn-primary">Login</button>
