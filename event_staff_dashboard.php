@@ -3,24 +3,6 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="jumbotron jumbotron-fluid" style="padding: 0px;">
-                      <div class="jumbotron-image"></div>
-                      <div class="container">
-                        <div class="bg-text">
-                            <h1 class="display-4">Event management simplified</h1>
-                            <p class="lead" style="color: white;">Empowering you to better manage events and focus on what matters</p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <div class="row">
 				<div class="col-12">
 					<div class="jumbotron jumbotron-fluid outlier-jumbo">
                       <div class="container">
