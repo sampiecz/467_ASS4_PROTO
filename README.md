@@ -1,13 +1,13 @@
 # Need to do / Verify we have
 ## These are notes I took while at the TA's office hours.
-- [ ]Login event manager
-- [ ]Event staff
-- [ ]CO
-- [ ]One dropdown
-- [ ]Three different dashboard
-- [ ]Event staff will have create artist band and agent
-- [ ]Event manager will have approve event and detailed report
-- [ ]Coo login will have the summary report. 
+-[ ]Login event manager
+-[ ]Event staff
+-[ ]CO
+-[ ]One dropdown
+-[ ]Three different dashboard
+-[ ]Event staff will have create artist band and agent
+-[ ]Event manager will have approve event and detailed report
+-[ ]Coo login will have the summary report. 
 
 # Welcome to our prototype for OFNI event management
 
