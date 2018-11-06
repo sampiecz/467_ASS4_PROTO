@@ -1,6 +1,12 @@
 <?php include 'header.php'; ?>
 
-        <section>
+<?php 
+
+    $getAgentSql = "SELECT * FROM Agent;";
+    $getAgentSqlPDO = $pdo->query($getAgentSql);
+    $agentRows = $getAgentSqlPDO->fetchAll();
+
+echo'   <section>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -21,23 +27,23 @@
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Information</h3>
-                                            <label for="exampleFormControlInput1">First Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistFirstName">First Name</label>
+                                            <input type="text" class="form-control" id="ArtistFirstName" name="ArtistFirstName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Middle Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="MiddleName">Middle Name</label>
+                                            <input type="text" class="form-control" id="MiddleName" name="MiddleName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Last Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="LastName">Last Name</label>
+                                            <input type="text" class="form-control" id="LastName" name="LastName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Gender</label>
-                                            <select class="form-control">
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Choose not to answer</option>
+                                            <label for="Gender">Gender</label>
+                                            <select class="form-control" name="Gender">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="NO">Choose not to answer</option>
                                             </select>
                                         </div>
                                     </div>
@@ -46,20 +52,20 @@
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Address</h3>
-                                            <label for="exampleFormControlInput1">Street</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistStreet">Street</label>
+                                            <input type="text" class="form-control" id="ArtistStreet" name="ArtistStreet" >
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">City</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistCity">City</label>
+                                            <input type="text" class="form-control" id="ArtistCity" >
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">State</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistState">State</label>
+                                            <input type="text" class="form-control" id="ArtistState" name="ArtistState">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Zip Code</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistZipCode">Zip Code</label>
+                                            <input type="text" class="form-control" id="ArtistZipCode" name="ArtistZipCode" >
                                         </div>
                                     </div>
                                 </div>
@@ -69,12 +75,12 @@
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Contact</h3>
-                                            <label for="exampleFormControlInput1">Email Address</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistEmail">Email Address</label>
+                                            <input type="text" class="form-control" id="ArtistEmail" name="ArtistEmail">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Phone Number</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistPhone">Phone Number</label>
+                                            <input type="text" class="form-control" id="ArtistPhone" name="ArtistPhone" >
                                         </div>
                                     </div>
                                 </div>
@@ -82,8 +88,8 @@
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Pricing</h3>
-                                            <label for="exampleFormControlInput1">Concert Rate</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                            <label for="ArtistPricing">Concert Rate</label>
+                                            <input type="text" class="form-control" id="ArtistPricing" name="ArtistPricing">
                                         </div>
                                     </div>
                                 </div>
@@ -94,11 +100,13 @@
                                         <div class="form-group">
                                             <h3>Artist Agent</h3>
                                             <label for="exampleFormControlInput1">Select an Agent</label>
-                                            <select class="form-control">
-                                                <!-- Need PHP loop through all existing agents. 
-                                                     So basically a "SELECT * FROM Agent" then a foreach php loop here
-                                                -->
-                                                <option></option>
+                                            <select class="form-control"> ';
+
+                                            foreach($agentRows as $row):
+                                                echo '<option value="' . $row['agentId'] . '" >' . $row['agentName'] . '</option>';
+                                            endforeach;
+
+echo '                                          
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -151,15 +159,18 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form method="post" action="">
+              <form method="post" action="create_a_new_artist.php">
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="AgentName">Agent Name</label>
+                        <input type="text" class="form-control" id="AgentName" name="AgentName">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
                         <button type="decline" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
               </form>
@@ -167,5 +178,8 @@
           </div>
         </div>
         <!-- End Modal -->
+';
+
+?>
 
 <?php include 'footer.php'; ?>

@@ -22,6 +22,8 @@
 - [ ] Add messages / form validation to things. Will make Kai all happy and give us a better grade. Woo. 
 - [ ] Add php for dropdown band / artist on create_a_new_event  
 - [ ] Once again, she fucking loves messages and validation. 
+- [ ] Add datepicker to generate summary report 
+
 
 # Welcome to our prototype for OFNI event management
 
