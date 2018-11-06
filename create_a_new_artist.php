@@ -34,7 +34,7 @@
 
             $sql = "INSERT INTO Artist (first_name, middle_name, last_name, gender, street, city, state, zip, email, phone_number, pricing) VALUES (:first_name, :middle_name, :last_name, :gender, :street, :city, :state, :zip, :email, :phone_number, :pricing) ";
             $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-            $result = $prepared->execute(array(':name' => $name, ':middle_name' => $middle_name, ':last_name' => $last_name, ':gender' => $gender, ':email' => $email, ':numbers' => $numbers));
+            $result = $prepared->execute(array(':first_name' => $first_name, ':middle_name' => $middle_name, ':last_name' => $last_name, ':gender' => $gender, ':street' => $street, ':city' => $city, ':state' => $state, ':zip' => $zip, ':email' => $email, ':phone_number' => $phone_number, ':pricing' => $pricing));
         }
 
     }
@@ -66,8 +66,8 @@ echo'   <section>
                                         <div class="form-group">
                                             <h3>Artist Agent</h3>
                                             <label for="exampleFormControlInput1">Select an Agent</label>
-                                            <input type="hidden" id="NewAgent" name="NewAgent" value="0">
-                                            <select name="AgentName" class="form-control"> ';
+                                            <input required type="hidden" id="NewAgent" name="NewAgent" value="0">
+                                            <select required name="AgentName" class="form-control"> ';
 
                                             foreach($agentRows as $row):
                                                 echo '<option value="' . $row['agentId'] . '" >' . $row['agentName'] . '</option>';
@@ -99,19 +99,19 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Information</h3>
                                             <label for="ArtistFirstName">First Name</label>
-                                            <input type="text" class="form-control" id="ArtistFirstName" name="ArtistFirstName">
+                                            <input required type="text" class="form-control" id="ArtistFirstName" name="ArtistFirstName">
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistMiddleName">Middle Name</label>
-                                            <input type="text" class="form-control" id="ArtistMiddleName" name="ArtistMiddleName">
+                                            <input required type="text" class="form-control" id="ArtistMiddleName" name="ArtistMiddleName">
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistLastName">Last Name</label>
-                                            <input type="text" class="form-control" id="ArtistLastName" name="ArtistLastName">
+                                            <input required type="text" class="form-control" id="ArtistLastName" name="ArtistLastName">
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistGender">Gender</label>
-                                            <select class="form-control" name="ArtistGender">
+                                            <select required class="form-control" name="ArtistGender">
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                                 <option value="NO">Choose not to answer</option>
@@ -124,19 +124,19 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Address</h3>
                                             <label for="ArtistStreet">Street</label>
-                                            <input type="text" class="form-control" id="ArtistStreet" name="ArtistStreet" >
+                                            <input required type="text" class="form-control" id="ArtistStreet" name="ArtistStreet" >
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistCity">City</label>
-                                            <input type="text" class="form-control" id="ArtistCity" >
+                                            <input required type="text" class="form-control" id="ArtistCity" name="ArtistCity"  >
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistState">State</label>
-                                            <input type="text" class="form-control" id="ArtistState" name="ArtistState">
+                                            <input required type="text" class="form-control" id="ArtistState" name="ArtistState">
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistZipCode">Zip Code</label>
-                                            <input type="text" class="form-control" id="ArtistZipCode" name="ArtistZipCode" >
+                                            <input required type="text" class="form-control" id="ArtistZipCode" name="ArtistZipCode" >
                                         </div>
                                     </div>
                                 </div>
@@ -147,11 +147,11 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Contact</h3>
                                             <label for="ArtistEmail">Email Address</label>
-                                            <input type="text" class="form-control" id="ArtistEmail" name="ArtistEmail">
+                                            <input required type="text" class="form-control" id="ArtistEmail" name="ArtistEmail">
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistPhone">Phone Number</label>
-                                            <input type="text" class="form-control" id="ArtistPhone" name="ArtistPhone" >
+                                            <input required type="text" class="form-control" id="ArtistPhone" name="ArtistPhone" >
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Pricing</h3>
                                             <label for="ArtistPricing">Concert Rate</label>
-                                            <input type="text" class="form-control" id="ArtistPricing" name="ArtistPricing">
+                                            <input required type="text" class="form-control" id="ArtistPricing" name="ArtistPricing">
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +172,8 @@ echo '
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                                 <div class="form-group">
-                                                    <button type="create" name="create" value="create" class="btn btn-success" style="width: 100%;">Create</button>
+                                                    <button type="create" value="create"  class="btn btn-success" style="width: 100%;">Create</button>
+
                                                 </div>
                                             </div>
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
@@ -204,8 +205,8 @@ echo '
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="AgentName">Agent Name</label>
-                        <input type="text" class="form-control" id="AgentName" name="AgentName">
-                        <input type="hidden" id="NewAgent" name="NewAgent" value="1">
+                        <input required type="text" class="form-control" id="AgentName" name="AgentName">
+                        <input required type="hidden" id="NewAgent" name="NewAgent" value="1">
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -23,22 +23,6 @@
                                 <div class="col-6">
                                     <div class="boxify">
                                         <div class="form-group ">
-                                            <h3>Band Name</h3>		
-                                            <label for="exampleFormControlInput1">Enter band name</label>
-                                            <input type="text" class="form-control" name="name" >
-                                        </div>
-                                    </div>
-                                    <div class="boxify">
-                                        <div class="form-group ">
-                                            <h3>Band Leader Contact</h3>
-                                            <label for="exampleFormControlInput1">Phone number</label>
-                                            <input type="text" class="form-control" name="bl_Number" >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="boxify">
-                                        <div class="form-group ">
                                             <h3>Band Members</h3>
                                             <label for="exampleFormControlInput1">Member title</label>
                                             <select class="form-control">
@@ -52,6 +36,22 @@
                                         <div class="form-group ">
                                             <label for="exampleFormControlInput1">Special notes</label>
                                             <textarea class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="boxify">
+                                        <div class="form-group ">
+                                            <h3>Band Name</h3>		
+                                            <label for="exampleFormControlInput1">Enter band name</label>
+                                            <input type="text" class="form-control" name="name" >
+                                        </div>
+                                    </div>
+                                    <div class="boxify">
+                                        <div class="form-group ">
+                                            <h3>Band Leader Contact</h3>
+                                            <label for="exampleFormControlInput1">Phone number</label>
+                                            <input type="text" class="form-control" name="bl_Number" >
                                         </div>
                                     </div>
                                 </div>
