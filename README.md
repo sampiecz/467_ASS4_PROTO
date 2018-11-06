@@ -1,13 +1,14 @@
 # Need to do / Verify we have
 ## These are notes I took while at the TA's office hours.
-- [X] Login event manager
-- [X] Event staff
-- [X] CO
-- [X] One dropdown
+- [x] Login event manager
+- [x] Event staff
+- [x] CO
+- [x] One dropdown
 - [ ] Three different dashboard
 - [ ] Event staff will have create artist band and agent
 - [ ] Event manager will have approve event and detailed report
 - [ ] Coo login will have the summary report. 
+- [ ] How do we add multiple band members inside the form? Probably jQuery. 
 
 # Welcome to our prototype for OFNI event management
 
