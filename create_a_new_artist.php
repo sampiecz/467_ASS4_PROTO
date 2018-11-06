@@ -17,19 +17,19 @@
                     <div class="col-12">
                         <form method="post" action="">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <h3>Artist Information</h3>
                                         <label for="exampleFormControlInput1">First Name</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Middle Name</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Casper">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Last Name</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Doe">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Gender</label>
@@ -40,25 +40,55 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <h3>Artist Address</h3>
+                                        <label for="exampleFormControlInput1">Street</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">City</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">State</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Zip Code</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <h3>Artist Contact</h3>
                                         <label for="exampleFormControlInput1">Email Address</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="johndoe@hotmail.com">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Phone Number</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="630 420 6666">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
                                     </div>
                                 </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <h3>Artist Pricing</h3>
+                                        <label for="exampleFormControlInput1">Concert Rate</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-12"> 
                                     <div class="row">
-                                        <div class="col-2" style="padding-right: 5px !important;">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <button type="create" class="btn btn-success" style="width: 100%;">Create</button>
                                             </div>
                                         </div>
-                                        <div class="col-2" style="padding-left: 5px !important; padding-right: 5px !important;">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <button type="cancel" class="btn btn-danger" style="width: 100%;">Cancel</button>
                                             </div>
