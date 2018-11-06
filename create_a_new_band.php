@@ -12,7 +12,7 @@
     </section>
     
     <section>
-		<form method="post" action=""> 
+		<form method="post" action="create_band_success.php">
 			<div class="container">
 				<div class="row">
 					<div class="col-6">

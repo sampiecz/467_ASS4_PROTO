@@ -18,6 +18,7 @@
 - [ ] Add modal popup for agent creation on artist creation page in case the agent isn't in dropdown 
 - [ ] Add modal popup for band member creation 
 - [ ] Create Agent Table and find out what attributes are needed to store it 
+- [ ] Add bandId & possibly agentId inside of create_a_new_band.php
 
 # Welcome to our prototype for OFNI event management
 
