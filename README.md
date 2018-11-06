@@ -15,6 +15,9 @@
 - [ ] Check for submit buttons and all buttons needed to navigate 
 - [ ] Add Agent to the same page as Create Artist/Band
 - [ ] Why would we right justify labels? Humans read right to left. That would just be bad UX. 
+- [ ] Add modal popup for agent creation on artist creation page in case the agent isn't in dropdown 
+- [ ] Add modal popup for band member creation 
+- [ ] Create Agent Table and find out what attributes are needed to store it 
 
 # Welcome to our prototype for OFNI event management
 
