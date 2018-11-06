@@ -1,5 +1,5 @@
 ###########################################################
-# CSCI 467 - Group Project - Spring 2018                  #
+# CSCI 467 - Group Project - Spring 25518                  #
 #                                                         #
 # Progammer: Sam Piecz & Philip Boffa                     #
 # Z-ID: Z1732715                                          #
@@ -17,12 +17,17 @@ DROP TABLE IF EXISTS Agent;
 CREATE TABLE Artist 
 (
     artistId integer AUTO_INCREMENT,
-    name Char(255) NOT NULL,
+    first_name Char(255) NOT NULL,
     middle_Name Char(255) NOT NULL,
-    last_Name Char(255) NOT NULL,
-    gender Char(20) NOT NULL,
+    last_name Char(255) NOT NULL,
+    gender Char(255) NOT NULL,
+    street Char(255) NOT NULL,
+    city Char(255) NOT NULL,
+    state Char(255) NOT NULL,
+    zip Char(255) NOT NULL,
     email Char(255) NOT NULL,
-    numbers Char(25) NOT NULL,
+    phone_number Char(25) NOT NULL,
+    pricing Char(25) NOT NULL,
     primary key (artistId)
 );
 

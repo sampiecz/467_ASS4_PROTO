@@ -2,6 +2,44 @@
 
 <?php 
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        $newAgent = trim($_POST['NewAgent']);
+
+        if($newAgent == "1")
+        {
+            $agentName = trim($_POST['AgentName']);
+            $sql = "INSERT INTO Agent (agentName) VALUES (:agentName)";
+            $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+            $result = $prepared->execute(array(':agentName' => $agentName));
+        }
+
+        else if($newAgent == "0")
+        {
+            $agent = trim($_POST['AgentName']);
+            $first_name = trim($_POST['ArtistFirstName']);
+            $middle_name = trim($_POST['ArtistMiddleName']);
+            $last_name = trim($_POST['ArtistLastName']);
+            $gender = trim($_POST['ArtistGender']);
+
+            $street = trim($_POST['ArtistStreet']);
+            $city = trim($_POST['ArtistCity']);
+            $state = trim($_POST['ArtistState']);
+            $zip = trim($_POST['ArtistZipCode']);
+
+            $email = trim($_POST['ArtistEmail']);
+            $phone_number = trim($_POST['ArtistPhone']);
+
+            $pricing = trim($_POST['ArtistPricing']);
+
+            $sql = "INSERT INTO Artist (first_name, middle_name, last_name, gender, street, city, state, zip, email, phone_number, pricing) VALUES (:first_name, :middle_name, :last_name, :gender, :street, :city, :state, :zip, :email, :phone_number, :pricing) ";
+            $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+            $result = $prepared->execute(array(':name' => $name, ':middle_name' => $middle_name, ':last_name' => $last_name, ':gender' => $gender, ':email' => $email, ':numbers' => $numbers));
+        }
+
+    }
+
+
     $getAgentSql = "SELECT * FROM Agent;";
     $getAgentSqlPDO = $pdo->query($getAgentSql);
     $agentRows = $getAgentSqlPDO->fetchAll();
@@ -21,7 +59,40 @@ echo'   <section>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form method="post" action="">
+                        <form method="post" action="create_a_new_artist.php">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="boxify">
+                                        <div class="form-group">
+                                            <h3>Artist Agent</h3>
+                                            <label for="exampleFormControlInput1">Select an Agent</label>
+                                            <input type="hidden" id="NewAgent" name="NewAgent" value="0">
+                                            <select name="AgentName" class="form-control"> ';
+
+                                            foreach($agentRows as $row):
+                                                echo '<option value="' . $row['agentId'] . '" >' . $row['agentName'] . '</option>';
+                                            endforeach;
+
+echo '                                          
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+											<div>
+												<div class="grey-line">
+												</div>
+												<label for="exampleFormControlInput1" style="width: 1%;padding: 0px 0.25% 0px 0.25%;">or</label>
+												<div class="grey-line">
+												</div>
+											</div>
+										</div>
+                                        <div class="form-group">
+											<label for="exampleFormControlInput1" >Create an Agent</label>
+											<br>
+                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="boxify">
@@ -31,16 +102,16 @@ echo'   <section>
                                             <input type="text" class="form-control" id="ArtistFirstName" name="ArtistFirstName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="MiddleName">Middle Name</label>
-                                            <input type="text" class="form-control" id="MiddleName" name="MiddleName">
+                                            <label for="ArtistMiddleName">Middle Name</label>
+                                            <input type="text" class="form-control" id="ArtistMiddleName" name="ArtistMiddleName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="LastName">Last Name</label>
-                                            <input type="text" class="form-control" id="LastName" name="LastName">
+                                            <label for="ArtistLastName">Last Name</label>
+                                            <input type="text" class="form-control" id="ArtistLastName" name="ArtistLastName">
                                         </div>
                                         <div class="form-group">
-                                            <label for="Gender">Gender</label>
-                                            <select class="form-control" name="Gender">
+                                            <label for="ArtistGender">Gender</label>
+                                            <select class="form-control" name="ArtistGender">
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                                 <option value="NO">Choose not to answer</option>
@@ -94,44 +165,14 @@ echo'   <section>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                               <div class="col-12">
-                                    <div class="boxify">
-                                        <div class="form-group">
-                                            <h3>Artist Agent</h3>
-                                            <label for="exampleFormControlInput1">Select an Agent</label>
-                                            <select class="form-control"> ';
-
-                                            foreach($agentRows as $row):
-                                                echo '<option value="' . $row['agentId'] . '" >' . $row['agentName'] . '</option>';
-                                            endforeach;
-
-echo '                                          
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-											<div>
-												<div class="grey-line">
-												</div>
-												<label for="exampleFormControlInput1" style="width: 1%;padding: 0px 0.25% 0px 0.25%;">or</label>
-												<div class="grey-line">
-												</div>
-											</div>
-										</div>
-                                        <div class="form-group">
-											<label for="exampleFormControlInput1" >Create an Agent</label>
-											<br>
-                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row"> 
                                 <div class="col-12"> 
                                     <div class="boxify">
                                         <h3>Submit Form & Create Artist</h3>             
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                                 <div class="form-group">
-                                                    <button type="create" class="btn btn-success" style="width: 100%;">Create</button>
+                                                    <button type="create" name="create" value="create" class="btn btn-success" style="width: 100%;">Create</button>
                                                 </div>
                                             </div>
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
@@ -164,13 +205,13 @@ echo '
                     <div class="form-group">
                         <label for="AgentName">Agent Name</label>
                         <input type="text" class="form-control" id="AgentName" name="AgentName">
+                        <input type="hidden" id="NewAgent" name="NewAgent" value="1">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
-
-                        <button type="decline" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="create" value="create" class="btn btn-success">Create Agent</button>
                     </div>
                 </div>
               </form>
