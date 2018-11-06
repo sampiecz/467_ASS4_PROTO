@@ -19,6 +19,9 @@
 - [ ] Add modal popup for band member creation 
 - [ ] Create Agent Table and find out what attributes are needed to store it 
 - [ ] Add bandId & possibly agentId inside of create_a_new_band.php
+- [ ] Add messages / form validation to things. Will make Kai all happy and give us a better grade. Woo. 
+- [ ] Add php for dropdown band / artist on create_a_new_event  
+- [ ] Once again, she fucking loves messages and validation. 
 
 # Welcome to our prototype for OFNI event management
 

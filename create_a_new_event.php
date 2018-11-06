@@ -12,27 +12,106 @@
     </section>
 
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <form method="post" action="">
-                      <div class="form-group">
-                        <label for="exampleFormControlInput1">Enter event name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlInput1">Enter event name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Casper">
-                      </div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-success">Create event</button>
-                      </div>
-                    </form>
+        <form method="post" action="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="boxify">
+                            <div class="form-group">
+                                <h3>Artist or Band</h3>
+                                <label for="exampleFormControlInput1">Enter event name</label>
+                                <select>
+                                    <!-- Php goes here -->
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="boxify">
+                            <div class="form-group">
+                                <h3>Event Manager</h3>
+                                <label for="exampleFormControlInput1">Enter event name</label>
+                                <select>
+                                    <!-- Php goes here -->
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="boxify">
+                            <div class="form-group">
+                                <h3>Event Location</h3>
+                                <label for="exampleFormControlInput1">Street</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">City</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">State</label>
+                                <select>
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Zip Code</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="boxify">
+                            <div class="form-group">
+                                <h3>Event Date</h3>
+                                <label for="exampleFormControlInput1">Start Time</label>
+                                <!-- Jquery -->
+                                <select>
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Status</label>
+                                <!-- Jquery -->
+                                <select>
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Seating Capacity</label>
+                                <!-- Jquery -->
+                                <select>
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12"> 
+                        <div class="boxify">
+                            <h3>Submit form & Create Event</h3>             
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                        <button type="create" class="btn btn-success" style="width: 100%;">Create</button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                        <button type="cancel" class="btn btn-danger" style="width: 100%;">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </section>
-
+<!--
  $sql = ("SELECT name, middle_Name, last_Name, gender, email, numbers FROM Artist WHERE artistId = '$artId'");
  $result = $conn->query($sql)
  if ($result->num_rows > 0) {
@@ -48,7 +127,7 @@ $sql = ("SELECT name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_
         while($row = $result->fetch_assoc()) {
                 echo "Band Name: " . $row["name"] . " - Band Member: " . $row["member"]  . " - Rate of Pay: " . $row["rate"] . " - Band Leader Contact: " . $row["bl_Number"] . " - Agent Street: " . $row["ag_Street"] . " - Agent City: " . $row["ag_City"] . " - Agent State: " . $row["ag_State"] . " - Agent Zip Code: " . $row["ag_Zip"] . " - Agent Email: " $row["ag_Email"] "<br>";
                 }
-
+-->
 
 
 <?php include 'footer.php'; ?>

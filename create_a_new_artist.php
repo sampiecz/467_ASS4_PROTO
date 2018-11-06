@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="col-12"> 
                                     <div class="boxify">
-                                        <h3>Submit form & Create Artist</h3>             
+                                        <h3>Submit Form & Create Artist</h3>             
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                                 <div class="form-group">
