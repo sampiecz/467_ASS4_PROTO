@@ -1,18 +1,20 @@
 # Need to do / Verify we have
 ## These are notes I took while at the TA's office hours.
-- [ ]Login event manager
-- [ ]Event staff
-- [ ]CO
-- [ ]One dropdown
-- [ ]Three different dashboard
-- [ ]Event staff will have create artist band and agent
-- [ ]Event manager will have approve event and detailed report
+- [x] Login event manager
+- [x] Event staff
+- [x] CO
+- [x] One dropdown
+- [ ] Three different dashboard
+- [ ] Event staff will have create artist band and agent
+- [ ] Event manager will have approve event and detailed report
+- [ ] Coo login will have the summary report. 
+- [ ] How do we add multiple band members inside the form? Probably jQuery. 
 - [ ]Coo login will have the summary report. 
 - [ ]Create table attribuites for Event
 - [ ]Link any PHP to the database and process any form to the database
 - [ ]Check for submit buttons and all buttons needed to navigate 
 - [ ]Add Agent to the same page as Create Artist/Band
-- [ ]
+
 # Welcome to our prototype for OFNI event management
 
 ## To login as a Event Manager follow these steps
