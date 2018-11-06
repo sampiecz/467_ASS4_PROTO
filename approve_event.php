@@ -15,36 +15,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-					<table class="table">
-					  <thead class="thead-light">
-						<tr>
-						  <th scope="col">#</th>
-						  <th scope="col">One</th>
-						  <th scope="col">Two</th>
-						  <th scope="col">Three</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <th scope="row">1</th>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						</tr>
-						<tr>
-						  <th scope="row">2</th>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						</tr>
-						<tr>
-						  <th scope="row">3</th>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						  <td>Placeholder</td>
-						</tr>
-					  </tbody>
-					</table>
+                        <table class="table">
+                          <thead class="thead-light">
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">One</th>
+                                  <th scope="col">Two</th>
+                                  <th scope="col">Three</th>
+                                </tr>
+                          </thead>
+                          <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                  <td>Placeholder</td>
+                                </tr>
+                          </tbody>
+                        </table>
                 </div>
             </div>
         </div>
