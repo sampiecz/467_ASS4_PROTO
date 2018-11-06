@@ -16,31 +16,31 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-6">
-						<div class="border-light">
+						<div class="">
 							<h2>Band Information</h2>
 							<hr>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<h3>Band Name</h3>		
 								<label for="exampleFormControlInput1">Enter band name</label>
 								<input type="text" class="form-control" name="name" >
 							</div>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<h3>Band Members</h3>
 								<label for="exampleFormControlInput1">Member title</label>
 								<select>
 									<option></option>
 								</select>
 							</div>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<label for="exampleFormControlInput1">Concert rate</label>
 								<input type="text" class="form-control" name="rate" >
 							</div>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<label for="exampleFormControlInput1">Special notes</label>
                                                                 <input type="text" class="form-control" name="notes" >
 								<textarea></textarea>
 							</div>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<h3>Band Leader Contact</h3>
 								<label for="exampleFormControlInput1">Phone number</label>
 								<input type="text" class="form-control" name="bl_Number" >
@@ -48,10 +48,10 @@
 						</div>
 					</div>
 					<div class="col-6">
-						<div class="border-light">
+						<div class="">
 							<h2>Agent Information</h2>
 							<hr>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<h3>Address</h3>
 								<label for="exampleFormControlInput1">Street</label>
 								<input type="text" class="form-control" name="ag_Street" >
@@ -62,17 +62,12 @@
 								<label for="exampleFormControlInput1">Zip Code</label>
 								<input type="text" class="form-control" name="ag_ZipCode" >
 							</div>
-							<div class="form-group border-light">
+							<div class="form-group ">
 								<h3>Agent Contact Information</h3>
 								<label for="exampleFormControlInput1">Email</label>
 								<input type="text" class="form-control" name="ag_Email" >
 								<label for="exampleFormControlInput1">Phone Number</label>
 								<input type="text" class="form-control" name="ag_Phone" >
-							</div>
-							<div class="form-group border-light">
-								<h3>Band Leader Contact</h3>
-								<label for="exampleFormControlInput1">Phone Number</label>
-								<input type="text" class="form-control" id="bl_Number" >
 							</div>
 						</div>
 					</div>
