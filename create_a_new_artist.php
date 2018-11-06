@@ -17,7 +17,7 @@
                     <div class="col-12">
                         <form method="post" action="">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Information</h3>
@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="boxify">
                                         <div class="form-group">
                                             <h3>Artist Address</h3>
