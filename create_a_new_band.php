@@ -25,7 +25,8 @@
                                         <div class="form-group ">
                                             <h3>Band Members</h3>
                                             <label for="exampleFormControlInput1">Member title</label>
-                                            <select class="form-control">
+                                           
+                                             <select class="form-control" name='members'>
                                                 <option></option>
                                             </select>
                                         </div>
@@ -35,7 +36,7 @@
                                         </div>
                                         <div class="form-group ">
                                             <label for="exampleFormControlInput1">Special notes</label>
-                                            <textarea class="form-control"></textarea>
+                                            <textarea class="form-control" name='notes'></textarea>
                                         </div>
                                     </div>
                                 </div>

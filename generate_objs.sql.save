@@ -1,5 +1,5 @@
 ###########################################################
-# CSCI 467 - Group Project - Spring 25518                  #
+# CSCI 467 - Group Project - Spring 2018                  #
 #                                                         #
 # Progammer: Sam Piecz & Philip Boffa                     #
 # Z-ID: Z1732715                                          #
@@ -12,22 +12,16 @@
 DROP TABLE IF EXISTS Event;
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Band;
-DROP TABLE IF EXISTS Agent;
 
 CREATE TABLE Artist 
 (
     artistId integer AUTO_INCREMENT,
-    first_name Char(255) NOT NULL,
+    name Char(255) NOT NULL,
     middle_Name Char(255) NOT NULL,
-    last_name Char(255) NOT NULL,
-    gender Char(255) NOT NULL,
-    street Char(255) NOT NULL,
-    city Char(255) NOT NULL,
-    state Char(255) NOT NULL,
-    zip Char(255) NOT NULL,
+    last_Name Char(255) NOT NULL,
+    gender Char(20) NOT NULL,
     email Char(255) NOT NULL,
-    phone_number Char(25) NOT NULL,
-    pricing Char(25) NOT NULL,
+    numbers Char(25) NOT NULL,
     primary key (artistId)
 );
 
@@ -36,7 +30,6 @@ CREATE TABLE Band
     bandId integer AUTO_INCREMENT,
     name Char(255) NOT NULL,
     member Char(255) NOT NULL,
-    notes Char(255) NOT NULL,
     rate Char(255) NOT NULL,
     bl_Number Char(255) NOT NULL,
     ag_Street Char(255) NOT NULL,
@@ -52,16 +45,6 @@ CREATE TABLE Event
 (
     eventId integer AUTO_INCREMENT,
     name Char(255),
-    str_Date Char(255),
-    end_Date Char(255),
-    street Char(255),
-    city Char(255),
-    state Char(255),
-    zip Char(255),
-    status Char(255), 
-    capacity Char(255),
-    evnt_Manager Char(255),
-    notes Char(255),
     bandId int,
     artistId int,
     primary key (eventId),
@@ -70,21 +53,11 @@ CREATE TABLE Event
 );
 
 
-CREATE TABLE Agent 
-(
-    agentId integer AUTO_INCREMENT,
-    agentName Char(255),
-    primary key (agentId)
-);
-
-INSERT INTO Agent (agentName) VALUES
-('Bob Ross'),
-('Jam Baxton II');
-
 INSERT INTO Artist (name, middle_name, last_name, gender, email, numbers) VALUES
 ('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
 ('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
 ('Mad', 'R', 'Keymentz', 'W', 'sarah@gmail.com', '6303629087');
+
 
 INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone) VALUES
 ('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),
