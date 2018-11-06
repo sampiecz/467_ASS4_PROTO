@@ -9,11 +9,12 @@
 - [ ] Event manager will have approve event and detailed report
 - [ ] Coo login will have the summary report. 
 - [ ] How do we add multiple band members inside the form? Probably jQuery. 
-- [ ]Coo login will have the summary report. 
-- [ ]Create table attribuites for Event
-- [ ]Link any PHP to the database and process any form to the database
-- [ ]Check for submit buttons and all buttons needed to navigate 
-- [ ]Add Agent to the same page as Create Artist/Band
+- [ ] Coo login will have the summary report. 
+- [ ] Create table attribuites for Event
+- [ ] Link any PHP to the database and process any form to the database
+- [ ] Check for submit buttons and all buttons needed to navigate 
+- [ ] Add Agent to the same page as Create Artist/Band
+- [ ] Why would we right justify labels? Humans read right to left. That would just be bad UX. 
 
 # Welcome to our prototype for OFNI event management
 
