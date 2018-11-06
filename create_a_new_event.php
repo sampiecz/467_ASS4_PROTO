@@ -20,7 +20,7 @@
                             <div class="form-group">
                                 <h3>Artist or Band</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select>
+                                <select class="form-control">
                                     <!-- Php goes here -->
                                     <option>Thing</option>
                                 </select>
@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select>
+                                <select class="form-control">
                                     <!-- Php goes here -->
                                     <option>Thing</option>
                                 </select>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
-                                <select>
+                                <select class="form-control">
                                     <option>Thing</option>
                                 </select>
                             </div>
@@ -70,21 +70,21 @@
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Time</label>
                                 <!-- Jquery -->
-                                <select>
+                                <select class="form-control">
                                     <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
                                 <!-- Jquery -->
-                                <select>
+                                <select class="form-control">
                                     <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
                                 <!-- Jquery -->
-                                <select>
+                                <select class="form-control">
                                     <option>Thing</option>
                                 </select>
                             </div>

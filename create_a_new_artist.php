@@ -94,7 +94,7 @@
                                         <div class="form-group">
                                             <h3>Artist Agent</h3>
                                             <label for="exampleFormControlInput1">Select an Agent</label>
-                                            <select>
+                                            <select class="form-control">
                                                 <!-- Need PHP loop through all existing agents. 
                                                      So basically a "SELECT * FROM Agent" then a foreach php loop here
                                                 -->
@@ -102,7 +102,17 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">or create an Agent</label>
+											<div>
+												<div class="grey-line">
+												</div>
+												<label for="exampleFormControlInput1" style="width: 1%;padding: 0px 0.25% 0px 0.25%;">or</label>
+												<div class="grey-line">
+												</div>
+											</div>
+										</div>
+                                        <div class="form-group">
+											<label for="exampleFormControlInput1" >Create an Agent</label>
+											<br>
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
                                         </div>
                                     </div>
