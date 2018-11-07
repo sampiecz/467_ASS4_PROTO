@@ -214,7 +214,7 @@ echo '
                                             </div>
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                                 <div class="form-group">
-                                                    <button type="cancel" class="btn btn-danger" style="width: 100%;">Cancel</button>
+                                                    <a href="create_a_new_artist.php" class="btn btn-danger" style="width: 100%;">Cancel</a>
                                                 </div>
                                             </div>
                                         </div>

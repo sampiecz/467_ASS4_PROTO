@@ -78,25 +78,20 @@
                         <div class="boxify">
                             <div class="form-group">
                                 <h3>Event Date</h3>
-                                <label for="exampleFormControlInput1">Start Time</label>
-                                <!-- Jquery -->
-                                <select class="form-control" name="str_Date">
-                                </select>
+                                <label for="exampleFormControlInput1">Start Date</label>
+                                <input type="text" name="start_date" class="form-control" id="datepicker1" >
                             </div>
-			 <div class="form-group">
-                         <label for="exampleFormControlInput1">End Time</label>
-                         <!-- Jquery -->
-                         <select class="form-control" name="end_Date">  
-                                </select>
+                             <div class="form-group">
+                                 <label for="exampleFormControlInput1">End Date</label>
+                                 <input type="text" name="end_date" class="form-control" id="datepicker2" >
+                            </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
-                                <!-- Jquery -->
                                 <select class="form-control" name="status">
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
-                                <!-- Jquery -->
                                 <select class="form-control" name="capacity">
                                 </select>
                             </div>
