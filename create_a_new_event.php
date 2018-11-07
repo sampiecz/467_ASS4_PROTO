@@ -21,7 +21,7 @@
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
                                 <input type="text"  class="form-control" name="name_Art">                      
-				// <option>Thing</option>
+				 <option>Thing</option>
                                 </select>
                             </div>
                         </div>
@@ -45,9 +45,7 @@
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select class="form-control">
-                                    <!-- Php goes here -->
-                                   // <option>Thing</option>
+                                <select class="form-control"> 
                                 </select>
                             </div>
                         </div>
@@ -68,7 +66,6 @@
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
                                 <select class="form-control" name="state">
-                                   // <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -84,27 +81,23 @@
                                 <label for="exampleFormControlInput1">Start Time</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="str_Date">
-                                   // <option>Thing</option>
                                 </select>
                             </div>
 			 <div class="form-group">
                          <label for="exampleFormControlInput1">End Time</label>
                          <!-- Jquery -->
                          <select class="form-control" name="end_Date">  
-                                   // <option>Thing</option>
                                 </select>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="status">
-                                   // <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="capacity">
-                                    //<option>Thing</option>
                                 </select>
                             </div>
                         </div>
