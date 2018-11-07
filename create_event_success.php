@@ -13,13 +13,31 @@
                 $Status = trim($_POST['status']);
                 $Capacity = trim($_POST['capacity']);
 
-$a = "SELECT artistId FROM Artist WHERE name =$_POST['name'];";
+$a = "SELECT artistId FROM Artist WHERE first_name =$_POST[name_Art];";
+$b = "SELECT bandId FROM Band WHERE name =$_POST[name_Band];";
 
-                if($_SERVER['REQUEST_METHOD'] == 'POST')
+$res1=$pdo->query($a);
+
+$res2=$pdo->query($b);
+
+
+//$c = "SELECT * FROM Band;";
+//$d = "SELECT * FROM Artist;";
+
+//foreach($d as  $row)
+//{
+//row["bandId"];
+
+
+//}
+
+
+              if($_SERVER['REQUEST_METHOD'] == 'POST')
                 {
-$q = "INSERT INTO Event (street, city, state, zip, str_Date, end_Date status, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+$q = "INSERT INTO Event (street, city, state, zip, str_Date, end_Date status, capacity,artistId,bandId) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?);";
 $query = $pdo->prepare($q);
-$results = $query->execute(array($Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity));
+$results = $query->execute(array($Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity,$res1,$res2));
+
                 }
 ?>
 

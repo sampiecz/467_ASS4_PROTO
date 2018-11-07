@@ -21,8 +21,9 @@
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
                                 <input type="text"  class="form-control" name="name_Art">
-                                    <!-- Php goes here -->
-                                    <option>Thing</option>
+                                  <?php
+				  ?>
+                                  <option>Thing</option>
                                 </select>
                             </div>
                         </div>
