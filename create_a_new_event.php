@@ -12,7 +12,7 @@
     </section>
 
     <section>
-        <form method="post" action="create_event_success.php">
+        <form method="post" action="create_a_new_event.php">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -20,10 +20,8 @@
                             <div class="form-group">
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
-                                <input type="text"  class="form-control" name="name_Art">
-                                  <?php
-				  ?>
-                                  <option>Thing</option>
+                                <input type="text"  class="form-control" name="name_Art">                      
+				// <option>Thing</option>
                                 </select>
                             </div>
                         </div>
@@ -49,7 +47,7 @@
                                 <label for="exampleFormControlInput1">Enter event name</label>
                                 <select class="form-control">
                                     <!-- Php goes here -->
-                                    <option>Thing</option>
+                                   // <option>Thing</option>
                                 </select>
                             </div>
                         </div>
@@ -70,7 +68,7 @@
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
                                 <select class="form-control" name="state">
-                                    <option>Thing</option>
+                                   // <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -86,27 +84,27 @@
                                 <label for="exampleFormControlInput1">Start Time</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="str_Date">
-                                    <option>Thing</option>
+                                   // <option>Thing</option>
                                 </select>
                             </div>
 			 <div class="form-group">
                          <label for="exampleFormControlInput1">End Time</label>
                          <!-- Jquery -->
                          <select class="form-control" name="end_Date">  
-                                    <option>Thing</option>
+                                   // <option>Thing</option>
                                 </select>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="status">
-                                    <option>Thing</option>
+                                   // <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
                                 <!-- Jquery -->
                                 <select class="form-control" name="capacity">
-                                    <option>Thing</option>
+                                    //<option>Thing</option>
                                 </select>
                             </div>
                         </div>
@@ -132,23 +130,61 @@
             </div>
         </form>
     </section>
-<!--
- $sql = ("SELECT name, middle_Name, last_Name, gender, email, numbers FROM Artist WHERE artistId = '$artId'");
- $result = $conn->query($sql)
- if ($result->num_rows > 0) {
-// output data of each row
-	while($row = $result->fetch_assoc()) { 
-		echo "First Name: " . $row["name"] . " - Middle Name: " . $row["middle_name"]  . " - Last Name: " . $row["last_name"] . " - Gender: " . $row["gender"] . " - Email: " . $row["email"] . " - Phone: " . $row["numbers"] "<br>";
-		}
 
-$sql = ("SELECT name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone FROM Band WHERE bandId = '$BandID'");
- $result = $conn->query($sql)
- if ($result->num_rows > 0) {
-// output data of each row
-        while($row = $result->fetch_assoc()) {
-                echo "Band Name: " . $row["name"] . " - Band Member: " . $row["member"]  . " - Rate of Pay: " . $row["rate"] . " - Band Leader Contact: " . $row["bl_Number"] . " - Agent Street: " . $row["ag_Street"] . " - Agent City: " . $row["ag_City"] . " - Agent State: " . $row["ag_State"] . " - Agent Zip Code: " . $row["ag_Zip"] . " - Agent Email: " $row["ag_Email"] "<br>";
-                }
--->
+ <?php
+               
+        if($_SERVER['REQUEST_METHOD'] == 'POST')
 
+                 $Street = trim($_POST['street']);
+                $City = trim($_POST['city']);
+                $State = trim($_POST['state']);
+                $Zip = trim($_POST['zip']);
+                $Start_Date = trim($_POST['str_Date']);
+                $End_Date = trim($_POST['end_Date']);
+                $Status = trim($_POST['status']);
+                $Capacity = trim($_POST['capacity']);
+
+
+
+
+
+
+
+//$a = "SELECT artistId FROM Artist WHERE first_name ="$_POST['name_Art']";";
+//$b = "SELECT bandId FROM Band WHERE name ="$_POST['name_Band']";";
+
+//$res1=$pdo->query($a);
+
+//$res2=$pdo->query($b);
+
+
+//$c = "SELECT * FROM Band;";
+//$d = "SELECT * FROM Artist;";
+
+//foreach($d as  $row)
+//{
+//row["bandId"];
+
+
+//}
+
+
+             
+              
+$q = "INSERT INTO Event (street, city, state, zip, str_Date, end_Date, status, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+$query = $pdo->prepare($q);
+$results = $query->execute(array($Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity));
+
+
+
+//$q = "INSERT INTO Event (street, city, state, zip, str_Date, end_Date status, capacity,artistId,bandId) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?);";
+//$query = $pdo->prepare($q);
+//$results = $query->execute(array($Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity,$res1,$res2));
+
+
+
+
+
+?>
 
 <?php include 'footer.php'; ?>
