@@ -20,7 +20,7 @@
                             <div class="form-group">
                                 <h3>Artist or Band</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select class="form-control">
+                                <input type="text"  class="form-control" name="name">
                                     <!-- Php goes here -->
                                     <option>Thing</option>
                                 </select>
@@ -46,21 +46,21 @@
                             <div class="form-group">
                                 <h3>Event Location</h3>
                                 <label for="exampleFormControlInput1">Street</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                <input type="text" class="form-control" name="street" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">City</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                <input type="text" class="form-control" name="city" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
-                                <select class="form-control">
+                                <select class="form-control" name="state">
                                     <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Zip Code</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                <input type="text" class="form-control" name="zip" >
                             </div>
                         </div>
                     </div>
@@ -70,27 +70,27 @@
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Time</label>
                                 <!-- Jquery -->
-                                <select class="form-control">
+                                <select class="form-control" name="str_Time>
                                     <option>Thing</option>
                                 </select>
                             </div>
 			 <div class="form-group">
                          <label for="exampleFormControlInput1">End Time</label>
                          <!-- Jquery -->
-                         <select class="form-control">
+                         <select class="form-control" name="end_Time" > 
                                     <option>Thing</option>
                                 </select>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
                                 <!-- Jquery -->
-                                <select class="form-control">
+                                <select class="form-control" name="status">
                                     <option>Thing</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
                                 <!-- Jquery -->
-                                <select class="form-control">
+                                <select class="form-control" name="capacity">
                                     <option>Thing</option>
                                 </select>
                             </div>
