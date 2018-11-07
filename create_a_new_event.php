@@ -12,7 +12,7 @@
     </section>
 
     <section>
-        <form method="post" action="">
+        <form method="post" action="create_event_success.php">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -74,6 +74,12 @@
                                     <option>Thing</option>
                                 </select>
                             </div>
+			 <div class="form-group">
+                         <label for="exampleFormControlInput1">End Time</label>
+                         <!-- Jquery -->
+                         <select class="form-control">
+                                    <option>Thing</option>
+                                </select>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
                                 <!-- Jquery -->
