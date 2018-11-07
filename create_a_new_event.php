@@ -18,9 +18,23 @@
                     <div class="col-12">
                         <div class="boxify">
                             <div class="form-group">
-                                <h3>Artist or Band</h3>
-                                <label for="exampleFormControlInput1">Enter event name</label>
-                                <input type="text"  class="form-control" name="name">
+                                <h3>Artist </h3>
+                                <label for="exampleFormControlInput1">Enter Artist </label>
+                                <input type="text"  class="form-control" name="name_Art">
+                                    <!-- Php goes here -->
+                                    <option>Thing</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+             <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                       <div class="boxify">
+                            <div class="form-group">
+                                <h3>Band </h3>
+                                <label for="exampleFormControlInput1">Enter Band </label>
+                                <input type="text"  class="form-control" name="name_Band">
                                     <!-- Php goes here -->
                                     <option>Thing</option>
                                 </select>
@@ -70,14 +84,14 @@
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Time</label>
                                 <!-- Jquery -->
-                                <select class="form-control" name="str_Time>
+                                <select class="form-control" name="str_Date">
                                     <option>Thing</option>
                                 </select>
                             </div>
 			 <div class="form-group">
                          <label for="exampleFormControlInput1">End Time</label>
                          <!-- Jquery -->
-                         <select class="form-control" name="end_Time" > 
+                         <select class="form-control" name="end_Date">  
                                     <option>Thing</option>
                                 </select>
                             <div class="form-group">
