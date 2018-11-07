@@ -12,6 +12,25 @@
             $sql = "INSERT INTO Agent (agentName) VALUES (:agentName)";
             $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
             $result = $prepared->execute(array(':agentName' => $agentName));
+
+
+            echo'
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <p>Agent created successfully.</p> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ';
+
         }
 
         else if($newAgent == "0")
@@ -35,6 +54,23 @@
             $sql = "INSERT INTO Artist (first_name, middle_name, last_name, gender, street, city, state, zip, email, phone_number, pricing) VALUES (:first_name, :middle_name, :last_name, :gender, :street, :city, :state, :zip, :email, :phone_number, :pricing) ";
             $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
             $result = $prepared->execute(array(':first_name' => $first_name, ':middle_name' => $middle_name, ':last_name' => $last_name, ':gender' => $gender, ':street' => $street, ':city' => $city, ':state' => $state, ':zip' => $zip, ':email' => $email, ':phone_number' => $phone_number, ':pricing' => $pricing));
+
+            echo'
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <p>Artist created successfully.</p> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ';
         }
 
     }

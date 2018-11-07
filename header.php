@@ -13,6 +13,7 @@
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body>
 
@@ -25,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="btn btn-secondary" href="login.php">Login</a>
+              <a class="btn btn-secondary" href="login.php">Login <i class="fa fa-user"></i></a>
             </li>
           </ul>
         </div>

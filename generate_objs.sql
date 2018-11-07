@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS Event;
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Band;
 DROP TABLE IF EXISTS Agent;
+DROP TABLE IF EXISTS BandMember;
 
 CREATE TABLE Artist 
 (
@@ -77,14 +78,36 @@ CREATE TABLE Agent
     primary key (agentId)
 );
 
+#CREATE TABLE BandMember 
+#(
+#    bandMemberId integer AUTO_INCREMENT,
+#    bandId int,
+#    title Char(255),
+#    rate Char(255),
+#    note Char(255),
+#    primary key (bandMemberId)
+#    FOREIGN KEY (bandId) REFERENCES Band (bandId),
+#);
+
+#CREATE TABLE Address;
+#(
+#    addressId integer AUTO_INCREMENT,
+#    street Char(255),
+#    city Char(255),
+#    state Char(255),
+#    zip_code int,
+#
+#);
+
 INSERT INTO Agent (agentName) VALUES
 ('Bob Ross'),
 ('Jam Baxton II');
 
-INSERT INTO Artist (name, middle_name, last_name, gender, email, numbers) VALUES
-('Phil', 'A', 'Boffa', 'M', 'philip@gmail.com', '6303622975'),
-('Sam', 'W', 'Piecz', 'M', 'sam@gmail.com', '6303655654'),
-('Mad', 'R', 'Keymentz', 'W', 'sarah@gmail.com', '6303629087');
+INSERT INTO Artist (first_name, middle_name, last_name, gender, street, city, state, zip, email, phone_number, pricing) VALUES
+('Phil1', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
+('Phil2', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
+('Phil3', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
+('Phil4', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975');
 
 INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone) VALUES
 ('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),

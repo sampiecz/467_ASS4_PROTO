@@ -8,6 +8,7 @@
                         <hr>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section>
@@ -17,9 +18,8 @@
                         <div class="col-6">
                             <div class="boxify">
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Filter by Date</label>
-                                    <!-- Make this a calendar date picker -->
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" >
+                                    <label for="date">Filter by Date</label>
+                                    <input type="text" name="date" class="form-control" id="datepicker" >
                                 </div>
                             </div>
                         </div>
@@ -67,5 +67,6 @@
                 </div>
             </div>
         </section>
+
 
 <?php include 'footer.php'; ?>
