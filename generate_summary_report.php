@@ -47,12 +47,13 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Filter by Status</label>
                                     <select class="form-control" name="status">
-                                        <option>Created</option>
-                                        <option>Approved</option>
-                                        <option>Advertised</option>
-                                        <option>Sold Out</option>
-                                        <option>Canceled</option>
-                                        <option>Completed</option>
+                                        <option value="">Please select an option</option>
+                                        <option value="Created">Created</option>
+                                        <option value="Approved">Approved</option>
+                                        <option value="Advertised">Advertised</option>
+                                        <option value="Sold Out">Sold Out</option>
+                                        <option value="Canceled">Canceled</option>
+                                        <option value="Completed">Completed</option>
                                     </select>
                                 </div>
                             </div>

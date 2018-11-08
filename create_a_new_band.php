@@ -65,6 +65,7 @@
                                             <h3>Band Members</h3>
                                             <label for="exampleFormControlInput1">Member title</label>
                                              <select class="form-control" name='members'>
+												<option value="">Please select an option</option>
                                                 <option>Band Leader</option>
                                                 <option>Drummer</option>
                                                 <option>Vocalist</option>
@@ -131,6 +132,7 @@
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">State</label>
 											<select class="form-control" name="ag_State">
+												<option value="">Please select an option</option>
 												<option value="AL">Alabama</option>
 												<option value="AK">Alaska</option>
 												<option value="AZ">Arizona</option>

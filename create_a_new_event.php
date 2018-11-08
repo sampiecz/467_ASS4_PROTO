@@ -82,7 +82,9 @@ echo '
                             <div class="form-group">
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
-                                <select  name="artistId" class="form-control"> ';
+                                <select  name="artistId" class="form-control">
+                                   <option value="">Please select an option</option>
+';
 
                                 foreach($artistRows as $row):
                                         echo '<option value="' . $row['artistId'] . '" >' . $row['first_name'] . '</option>';
@@ -106,7 +108,9 @@ $bandRows = $getBandSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Band </h3>
                                 <label for="exampleFormControlInput1">Enter Band </label>
-                                   <select  name="bandId" class="form-control">'; 
+                                   <select  name="bandId" class="form-control">
+                                       <option value="">Please select an option</option>
+'; 
                                  foreach($bandRows as $row):
                                         echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
                                         endforeach;
@@ -127,7 +131,9 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select  name="managerId" class="form-control">';
+                                <select  name="managerId" class="form-control">
+                                    <option value="">Please select an option</option>
+';
 
                                   foreach($managerRows as $row):
                                         echo '<option value="' . $row['managerId'] . '" >' . $row['managerName'] . '</option>';
@@ -154,6 +160,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
                                 <select class="form-control" name="state">
+                                    <option value="">Please select an option</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -229,6 +236,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
 				<select class="form-control" name="status">
+                    <option value="">Please select an option</option>
 					<option>Created</option>
 					<option>Approved</option>
 					<option>Advertised</option>
