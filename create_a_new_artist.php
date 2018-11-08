@@ -308,11 +308,35 @@ echo '
               <form method="post" action="create_a_new_artist.php">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="AgentName">Agent Name</label>
-                        <input required type="text" class="form-control" id="AgentName" name="AgentName">
-                        <input required type="hidden" id="NewAgent" name="NewAgent" value="1">
+                        <label for="AgentStreet">Agent Street</label>
+                        <input required type="text" class="form-control" id="AgentStreet" name="AgentStreet">
+                        <input required type="hidden" id="AgentStreet" name="AgentStreet" value="1">
                     </div>
-                </div>
+                     <div class="form-group">
+                        <label for="AgentCity">Agent City</label>
+                        <input required type="text" class="form-control" id="AgentCity" name="AgentCity">
+                        <input required type="hidden" id="AgentCity" name="AgentCity" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="AgentState">Agent State</label>
+                        <input required type="text" class="form-control" id="AgentState" name="AgentState">
+                        <input required type="hidden" id="AgentState" name="AgentState" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="AgentZip">Agent Zip Code</label>
+                        <input required type="text" class="form-control" id="AgentZip" name="AgentZip">
+                        <input required type="hidden" id="AgentZip" name="AgentZip" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="AgentEmail">Agent Email</label>
+                        <input required type="text" class="form-control" id="AgentEmail" name="AgentEmail">
+                        <input required type="hidden" id="AgentEmail" name="AgentEmail" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="AgentPhone">Agent Phone</label>
+                        <input required type="text" class="form-control" id="AgentPhone" name="AgentPhone">
+                        <input required type="hidden" id="AgentPhone" name="AgentPhone" value="1">
+                    </div>
                 <div class="modal-footer">
                     <div class="form-group">
                         <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
