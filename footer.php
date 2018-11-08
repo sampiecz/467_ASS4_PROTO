@@ -17,9 +17,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             $( function() {
-                $( "#datepicker" ).datepicker();
+                $( "#datepicker1" ).datepicker();
+                $( "#datepicker2" ).datepicker();
             } );
         </script>
+    <script src="js/select_row.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </body>

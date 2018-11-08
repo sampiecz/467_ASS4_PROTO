@@ -72,7 +72,13 @@
                                         </div>
                                         <div class="form-group ">
                                             <label for="exampleFormControlInput1">Concert rate</label>
-                                            <input type="text" class="form-control" name="rate" >
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">$</span>
+											  </div>
+                                              <input type="text" class="form-control" name="rate" >
+											</div>
+
                                         </div>
                                         <div class="form-group ">
                                             <label for="exampleFormControlInput1">Special notes</label>
@@ -92,7 +98,12 @@
                                         <div class="form-group ">
                                             <h3>Band Leader Contact</h3>
                                             <label for="exampleFormControlInput1">Phone number</label>
-                                            <input type="text" class="form-control" name="bl_Number" >
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+											  </div>
+                                              <input type="phone" class="form-control" name="bl_Number" >
+											</div>
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +130,59 @@
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">State</label>
-											<input type="text" class="form-control" name="ag_State" placeholder="make this a dropdown">
+											<select class="form-control" name="ag_State">
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">District Of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select>	
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">Zip Code</label>
@@ -132,11 +195,21 @@
 										<div class="form-group ">
 											<h3>Agent Contact Information</h3>
 											<label for="exampleFormControlInput1">Email</label>
-											<input type="text" class="form-control" name="ag_Email" >
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">@</span>
+											  </div>
+											  <input type="text" class="form-control" name="ag_Email" >
+											</div>
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">Phone Number</label>
-											<input type="text" class="form-control" name="ag_Phone" >
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+											  </div>
+											  <input type="phone" class="form-control" name="ag_Phone" >
+											</div>
 										</div>
 									</div>
                                 </div>
@@ -150,6 +223,7 @@
 							<h2>Submit Form & Create Band</h2>
 							<div class="form-group">
 								<button type="submit" class="btn btn-success">Create Band</button>
+								<a href="create_a_new_band.php" class="btn btn-danger">Cancel</a>
 							</div>
 						</div>
 					</div>
