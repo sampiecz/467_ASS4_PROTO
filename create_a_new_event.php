@@ -62,8 +62,11 @@ $bandRows = $getBandSqlPDO->fetchAll();
                                         echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
                                         endforeach;
 
-                               
 
+$getManagerSql = "SELECT * FROM Manager;";
+$getManagerSqlPDO = $pdo->query($getManagerSql);
+$managerRows = $getManagerSqlPDO->fetchAll();
+                               
                         echo '
 
                               </select>
@@ -75,7 +78,13 @@ $bandRows = $getBandSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select class="form-control"> 
+                                <select required name="managerId" class="form-control">';
+
+                                  foreach($managerRows as $row):
+                                        echo '<option value="' . $row['managerId'] . '" >' . $row['managerName'] . '</option>';
+                                        endforeach;
+                
+                        echo '
                                 </select>
                             </div>
                         </div>
