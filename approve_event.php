@@ -56,9 +56,11 @@
                         <div class="col-12">
             ';
 
-            $sql = "SELECT * FROM Event;";
-            $getEvents = $pdo->query($sql);
+            $eventSql = "SELECT * FROM Event;";
+            $getEvents = $pdo->query($eventSql);
             $eventRows = $getEvents->fetchAll();
+
+            
             $counter = 1;
 
             echo'
@@ -80,6 +82,11 @@
                                   <tbody class="record_table">
         ';
                                         foreach($eventRows as $row):
+
+                                            $managerSql = "SELECT * FROM Manager WHERE managerId = " . $row['managerId'] . " LIMIT 1;";
+                                            $getManagers = $pdo->query($managerSql);
+                                            $managerRow = $getManagers->fetch();
+
                                             echo '
                                         <tr>'
                                         .  '<th scope="row">' . $counter . '</th>'
@@ -89,7 +96,7 @@
                                         .     '<td>' . $row['street'] . ' ' . $row['city'] . ' ' . $row['state'] . ' ' . $row['zip'] . '</td>'
                                         .     '<td>' . $row['status'] . '</td>'
                                         .     '<td>' . $row['capacity'] . '</td>'
-                                        .     '<td>' . $row['event_Manager'] . '</td>'
+                                        .     '<td>' . $managerRow['managerName'] . '</td>'
                                         .     '<td>' . $row['notes'] . '</td>'
                                         .     '<td><input value="' . $row['eventId'] . '" class="form-control" type="checkbox" name="check_list[]" /></td>' .
                                        '</tr>';

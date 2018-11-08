@@ -103,7 +103,9 @@ echo'   <section>
                                             <h3>Artist Agent</h3>
                                             <label for="exampleFormControlInput1">Select an Agent</label>
                                             <input required type="hidden" id="NewAgent" name="NewAgent" value="0">
-                                            <select required name="AgentName" class="form-control"> ';
+                                            <select required required name="AgentName" class="form-control">
+												<option value="">Please select an option</option>
+                                            ';
 
                                             foreach($agentRows as $row):
                                                 echo '<option value="' . $row['agentId'] . '" >' . $row['agentName'] . '</option>';
@@ -147,7 +149,8 @@ echo '
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistGender">Gender</label>
-                                            <select required class="form-control" name="ArtistGender">
+                                            <select required required class="form-control" name="ArtistGender">
+												<option value="">Please select an option</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                                 <option value="NO">Choose not to answer</option>
@@ -168,7 +171,8 @@ echo '
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistState">State</label>
-											<select class="form-control" name="ArtistState" id="ArtistState">
+											<select required class="form-control" name="ArtistState" id="ArtistState">
+												<option value="">Please select an option</option>
 												<option value="AL">Alabama</option>
 												<option value="AK">Alaska</option>
 												<option value="AZ">Arizona</option>
