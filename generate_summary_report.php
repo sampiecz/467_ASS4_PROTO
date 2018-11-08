@@ -13,7 +13,7 @@
 
         <section>
             <div class="container">
-                <form method="post" action="">
+                <form method="post" action="phil_gen_report.php">
                     <div class="row">
                         <div class="col-3">
                             <div class="boxify">
