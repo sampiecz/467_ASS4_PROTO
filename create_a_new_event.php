@@ -233,6 +233,10 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                                  <label for="exampleFormControlInput1">End Date</label>
                                  <input required type="text" name="end_Date" class="form-control" id="datepicker2" >
                             </div>
+                             <div class="form-group">
+                                 <label for="exampleFormControlInput1">Time</label>
+                                 <input required type="text" name="time" class="form-control" id="time" >
+                            </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
 				<select required class="form-control" name="status">
