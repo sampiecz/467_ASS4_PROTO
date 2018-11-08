@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                             <div class="form-group">
-                                <button type="create" class="btn btn-secondary" style="width: 100%;">Print <i class="fa fa-print"></i></button>
+                                <a href="javascript:window.print()" class="btn btn-secondary" style="width: 100%;">Print <i class="fa fa-print"></i></a>
                             </div>
                         </div>
                     </div>
