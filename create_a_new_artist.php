@@ -183,11 +183,21 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Contact</h3>
                                             <label for="ArtistEmail">Email Address</label>
-                                            <input required type="text" class="form-control" id="ArtistEmail" name="ArtistEmail">
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">@</span>
+											  </div>
+                                              <input required type="text" class="form-control" id="ArtistEmail" name="ArtistEmail">
+											</div>
                                         </div>
                                         <div class="form-group">
                                             <label for="ArtistPhone">Phone Number</label>
-                                            <input required type="text" class="form-control" id="ArtistPhone" name="ArtistPhone" >
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+											  </div>
+                                              <input required type="text" class="form-control" id="ArtistPhone" name="ArtistPhone" >
+											</div>
                                         </div>
                                     </div>
                                 </div>
@@ -196,7 +206,12 @@ echo '
                                         <div class="form-group">
                                             <h3>Artist Pricing</h3>
                                             <label for="ArtistPricing">Concert Rate</label>
-                                            <input required type="text" class="form-control" id="ArtistPricing" name="ArtistPricing">
+											<div class="input-group mb-3">
+											  <div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">$</span>
+											  </div>
+                                              <input required type="text" class="form-control" id="ArtistPricing" name="ArtistPricing">
+											</div>
                                         </div>
                                     </div>
                                 </div>

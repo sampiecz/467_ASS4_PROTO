@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
 
+<?php 
+    echo'
     <section>
         <div class="container">
             <div class="row">
@@ -14,54 +16,75 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                        <table class="table">
-                          <thead class="thead-light">
-                                <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">One</th>
-                                  <th scope="col">Two</th>
-                                  <th scope="col">Three</th>
-                                </tr>
-                          </thead>
-                          <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                  <td>Placeholder</td>
-                                </tr>
-                          </tbody>
-                        </table>
-                </div>
-            </div>
-        </div>
-    </section>
+                <form action="approve_event.php" method="POST">
+                    <div class="col-12">
+        ';
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<form method="post" action="">
-						<div class="form-group">
-							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Decline event</button>
-							<button type="submit" class="btn btn-success">Approve event</button>
-						</div>
-					</form>
-				</div>
-			</div>
+        $sql = "SELECT * FROM Event;";
+        $getEvents = $pdo->query($sql);
+        $eventRows = $getEvents->fetchAll();
+        $counter = 1;
+
+        echo'
+                            <table class="table boxify">
+                              <thead class="thead-light">
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">Start Date</th>
+                                      <th scope="col">End Date</th>
+                                      <th scope="col">Location</th>
+                                      <th scope="col">Status</th>
+                                      <th scope="col">Capacity</th>
+                                      <th scope="col">Event Manager</th>
+                                      <th scope="col">Notes</th>
+                                      <th scope="col">Select Event</th>
+                                    </tr>
+                              </thead>
+                              <tbody class="record_table">
+    ';
+                                    foreach($eventRows as $row):
+                                        echo '
+                                    <tr>'
+                                    .  '<th scope="row">' . $counter . '</th>'
+                                    .     '<td>' . $row['name'] . '</td>'
+                                    .     '<td>' . $row['str_Date'] . '</td>'
+                                    .     '<td>' . $row['end_Date'] . '</td>'
+                                    .     '<td>' . $row['street'] . ' ' . $row['city'] . ' ' . $row['state'] . ' ' . $row['zip'] . '</td>'
+                                    .     '<td>' . $row['status'] . '</td>'
+                                    .     '<td>' . $row['capacity'] . '</td>'
+                                    .     '<td>' . $row['event_Manager'] . '</td>'
+                                    .     '<td>' . $row['notes'] . '</td>'
+                                    .     '<td><input value="' . $row['eventId'] . '" class="form-control" type="checkbox" /></td>' .
+                                   '</tr>';
+                                    endforeach;
+
+        echo'
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td>Placeholder</td>
+                                      <td><input class="form-control" type="checkbox" /></td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Decline event</button>
+                            <button type="submit" class="btn btn-success">Approve event</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 		</div>
 	</section>
 
@@ -91,6 +114,8 @@
 	  </div>
 	</div>
 	<!-- End Modal -->
+';
 
+?>
 
 <?php include 'footer.php'; ?>
