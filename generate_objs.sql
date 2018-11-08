@@ -10,7 +10,8 @@
 ###########################################################
 
 DROP TABLE IF EXISTS Event;
-DROP TABLE IF EXISTS Artist; DROP TABLE IF EXISTS Band;
+DROP TABLE IF EXISTS Artist; 
+DROP TABLE IF EXISTS Band;
 DROP TABLE IF EXISTS Agent;
 DROP TABLE IF EXISTS BandMember;
 DROP TABLE IF EXISTS Manager;
@@ -49,6 +50,13 @@ CREATE TABLE Band
     primary key (bandId)
 );
 
+CREATE TABLE Manager
+(
+        managerId integer AUTO_INCREMENT,
+        managerName Char(255),
+        primary key (managerId) 
+);
+
 CREATE TABLE Event 
 (
     eventId integer AUTO_INCREMENT,
@@ -79,12 +87,7 @@ CREATE TABLE Agent
     primary key (agentId)
 );
 
-CREATE TABLE Manager
-(
-        managerId integer AUTO_INCREMENT,
-        managerName Char(255),
-        primary key (managerId) 
-);
+
 
 
 #CREATE TABLE BandMember 
@@ -128,7 +131,7 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 ('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),
 ('Sam', 'West', '500', '3453334323', 'idc ave', 'Lisle', 'OK', '56044', 'fuck@gmail.com', '4561234567');
 
-
-INSERT INTO Event (name, str_Date, end_Date, street, city, state, zip, status, capacity, managerName, notes, bandId, artistId) VALUES
-("Event name", "Start Date", "End Date", "Street", "City", "State", "Zip", "Status", "Capacity", "Event Manager", "Notes", 1, 1),
-("Eve2t name", "St2rt Date", "End D2te", "Str2et", "C2ty", "Sta2e", "Z2p", "Stat2s", "Capacit2", "Event Manage2", "Notes2", 1, 1);
+INSERT INTO Event (name, str_Date, end_Date, street, city, state, zip, status, capacity, notes, tickets, bandId, artistId, managerId) VALUES 
+("Event name", "Start Date", "End Date", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "Tickets", 1, 1, 1),
+("2vent name", "Start 2ate", "End 2ate", "2treet", "2ity", "2tate", "2ip", "2tatus", "2apacity", "2otes", "Ti2kets", 1, 1, 1),
+("3vent name", "3tart Date", "3nd Date", "3treet", "3ity", "3tate", "3ip", "3tatus", "3apacity", "3otes", "3ickets", 1, 1, 1);

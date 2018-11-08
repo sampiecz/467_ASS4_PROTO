@@ -35,6 +35,23 @@
                 $query = $pdo->prepare($q);
                 $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity, $ArtistId, $BandId, $ManagerId, $Notes, $Tickets));
 
+            echo'
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <p>Event created successfully.</p> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ';
+
         }
 
 $getArtistSql = "SELECT * FROM Artist;";
@@ -51,7 +68,7 @@ echo '
                             <div class="form-group">
                                 <h3>Event Name</h3>
                                 <label for="exampleFormControlInput1">Enter Event Name</label>
-                                <input name="name" class="form-control" />
+                                <input required name="name" class="form-control" />
                                 </select>
                             </div>
                         </div>
@@ -65,7 +82,7 @@ echo '
                             <div class="form-group">
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
-                                <select required name="artistId" class="form-control"> ';
+                                <select  name="artistId" class="form-control"> ';
 
                                 foreach($artistRows as $row):
                                         echo '<option value="' . $row['artistId'] . '" >' . $row['first_name'] . '</option>';
@@ -89,7 +106,7 @@ $bandRows = $getBandSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Band </h3>
                                 <label for="exampleFormControlInput1">Enter Band </label>
-                                   <select required name="bandId" class="form-control">'; 
+                                   <select  name="bandId" class="form-control">'; 
                                  foreach($bandRows as $row):
                                         echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
                                         endforeach;
@@ -110,7 +127,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select required name="managerId" class="form-control">';
+                                <select  name="managerId" class="form-control">';
 
                                   foreach($managerRows as $row):
                                         echo '<option value="' . $row['managerId'] . '" >' . $row['managerName'] . '</option>';
@@ -128,11 +145,11 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Location</h3>
                                 <label for="exampleFormControlInput1">Street</label>
-                                <input type="text" class="form-control" name="street" >
+                                <input required type="text" class="form-control" name="street" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">City</label>
-                                <input type="text" class="form-control" name="city" >
+                                <input required type="text" class="form-control" name="city" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
@@ -192,7 +209,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Zip Code</label>
-                                <input type="text" class="form-control" name="zip" >
+                                <input required type="text" class="form-control" name="zip" >
                             </div>
                         </div>
                     </div>
@@ -203,11 +220,11 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Date</label>
-                                <input type="text" name="str_Date" class="form-control" id="datepicker1" >
+                                <input required type="text" name="str_Date" class="form-control" id="datepicker1" >
                             </div>
                              <div class="form-group">
                                  <label for="exampleFormControlInput1">End Date</label>
-                                 <input type="text" name="end_Date" class="form-control" id="datepicker2" >
+                                 <input required type="text" name="end_Date" class="form-control" id="datepicker2" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
@@ -222,11 +239,16 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
-                                <input type="text" class="form-control" name="capacity">
+                                <input required type="text" class="form-control" name="capacity">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Ticket Price</label>
-                                <input type="text" class="form-control" name="tickets">
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                  </div>
+                                  <input required type="text" class="form-control" name="tickets">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -237,7 +259,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Special Notes</h3>
                                 <label for="exampleFormControlInput1">Special Notes</label>
-                                <input type="text" name="notes" class="form-control" >
+                                <input required type="text" name="notes" class="form-control" >
                             </div>
                         </div>
                     </div>
