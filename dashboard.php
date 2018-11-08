@@ -123,20 +123,28 @@
         
             echo'
 
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Please login</h1>
-                            <hr>
-                            <p style="text-align: center;">
-                                <a href="login.php" class="btn btn-primary" style="text-align: center;">Go To Login</a>
-                            </p>
-                        </div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Please login</h1>
+                        <hr>
                     </div>
                 </div>
-            </section>
-
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    <p style="text-align: center;">
+                        <a href="login.php" class="btn btn-primary" style="text-align: center;">Go To Login</a>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
             ';
 
         }

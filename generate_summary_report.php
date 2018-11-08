@@ -61,7 +61,7 @@
         </section>
 
     <!-- <form method="post" action="produce_summary_report.php"> -->
-    <form method="post" action="phil_gen_rep.php"> 
+    <form method="post" action="produce_summary_report.php"> 
         <section>
             <div class="container">
                     <div class="row">
@@ -88,7 +88,6 @@
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
                                       </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -141,6 +140,12 @@
 													<input type="checkbox" name="select-all" id="select-all" id="checkbox-4"> <span class="label-text">All</span>
 												</label>
 											</div>
+					<div class="form-check">
+												<label>
+													<input type="checkbox" name="select-all" id="select-all" id="checkbox-4"> <span class="label-text">All</span>
+												</label>
+											</div>
+
                                         </div>
                                     </div>
                                     <div class="row">
@@ -202,6 +207,13 @@
 			});
 		}
 	});
+//Event Id
+//Event Name
+//Location
+//Date 
+//Time
+//Contact For Band or Artist
+
 </script>
 
 <?php include 'footer.php'; ?>
