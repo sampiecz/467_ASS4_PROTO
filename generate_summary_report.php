@@ -64,6 +64,10 @@
     <form method="post" action="produce_summary_report.php"> 
         <section>
             <div class="container">
+<<<<<<< HEAD
+                <form method="post" action="phil_gen_rep.php">
+=======
+>>>>>>> 28691259dca4535a77e9c828b4ba6d57b5fe9dfa
                     <div class="row">
                         <div class="col-3">
                             <div class="boxify">
