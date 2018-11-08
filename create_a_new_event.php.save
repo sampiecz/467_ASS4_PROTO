@@ -14,68 +14,44 @@
 <?php
 
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
-                $Name = trim($_POST['name']);
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+
+
+
                 $Street = trim($_POST['street']);
                 $City = trim($_POST['city']);
                 $State = trim($_POST['state']);
                 $Zip = trim($_POST['zip']);
                 $Start_Date = trim($_POST['str_Date']);
                 $End_Date = trim($_POST['end_Date']);
-                $Time = trim($_POST['time']);
                 $Status = trim($_POST['status']);
                 $Capacity = trim($_POST['capacity']);
-                $ArtistId = trim($_POST['artistId']);
-                $BandId = trim($_POST['bandId']);
-                $ManagerId = trim($_POST['managerId']);
-                $Notes = trim($_POST['notes']);
-                $Tickets = trim($_POST['tickets']);
 
-                $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, time, status, capacity, artistId, bandId, managerId, notes, tickets) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-                $query = $pdo->prepare($q);
-                $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Time, $Status, $Capacity, $ArtistId, $BandId, $ManagerId, $Notes, $Tickets));
 
-            echo'
-                <section>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <p>Event created successfully.</p> 
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            ';
+$Street = trim($_POST['street']);
+                $City = trim($_POST['city']);
+                $State = trim($_POST['state']);
+                $Zip = trim($_POST['zip']);
+                $Start_Date = trim($_POST['str_Date']);
+                $End_Date = trim($_POST['end_Date']);
+                $Status = trim($_POST['status']);
+                $Capacity = trim($_POST['capacity']);
 
-        }
+
+
 
 $getArtistSql = "SELECT * FROM Artist;";
 $getArtistSqlPDO = $pdo->query($getArtistSql);
 $artistRows = $getArtistSqlPDO->fetchAll();
 
 echo '
+
+
+
     <section>
         <form method="post" action="create_a_new_event.php">
-          <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="boxify">
-                            <div class="form-group">
-                                <h3>Event Name</h3>
-                                <label for="exampleFormControlInput1">Enter Event Name</label>
-                                <input required name="name" class="form-control" />
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -83,11 +59,11 @@ echo '
                             <div class="form-group">
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
-                                <select  name="artistId" class="form-control"> ';
+                                <select required name="artistId" class="form-control"> ';
 
                                 foreach($artistRows as $row):
                                         echo '<option value="' . $row['artistId'] . '" >' . $row['first_name'] . '</option>';
-                                endforeach;
+                                        endforeach;
 
 
 $getBandSql = "SELECT * FROM Band;";
@@ -107,7 +83,7 @@ $bandRows = $getBandSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Band </h3>
                                 <label for="exampleFormControlInput1">Enter Band </label>
-                                   <select  name="bandId" class="form-control">'; 
+                                   <select required name="bandId" class="form-control">'; 
                                  foreach($bandRows as $row):
                                         echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
                                         endforeach;
@@ -127,8 +103,8 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                         <div class="boxify">
                             <div class="form-group">
                                 <h3>Event Manager</h3>
-                                <label for="exampleFormControlInput1">Enter Event Name</label>
-                                <select  name="managerId" class="form-control">';
+                                <label for="exampleFormControlInput1">Enter event name</label>
+                                <select required name="managerId" class="form-control">';
 
                                   foreach($managerRows as $row):
                                         echo '<option value="' . $row['managerId'] . '" >' . $row['managerName'] . '</option>';
@@ -146,11 +122,11 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Location</h3>
                                 <label for="exampleFormControlInput1">Street</label>
-                                <input required type="text" class="form-control" name="street" >
+                                <input type="text" class="form-control" name="street" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">City</label>
-                                <input required type="text" class="form-control" name="city" >
+                                <input type="text" class="form-control" name="city" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
@@ -207,94 +183,46 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                                     <option value="WI">Wisconsin</option>
                                     <option value="WY">Wyoming</option>
                                 </select>	
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Zip Code</label>
-                                <input required type="text" class="form-control" name="zip" >
+                                <input type="text" class="form-control" name="zip" >
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-12">
                         <div class="boxify">
                             <div class="form-group">
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Date</label>
-                                <input required type="text" name="str_Date" class="form-control" id="datepicker1" >
+                                <input type="text" name="start_date" class="form-control" id="datepicker1" >
                             </div>
                              <div class="form-group">
                                  <label for="exampleFormControlInput1">End Date</label>
-                                 <input required type="text" name="end_Date" class="form-control" id="datepicker2" >
+                                 <input type="text" name="end_date" class="form-control" id="datepicker2" >
                             </div>
-                           <div class="form-group">
-                               <label for="exampleFormControlInput1">Time</label>
-	        		<select class="form-control" name="time">
-					<option>12:00AM</option>
-					<option>1:00AM</option>
-					<option>2:00AM</option>
-					<option>3:00AM</option>
-					<option>4:00AM</option>
-					<option>5:00AM</option>
-                			<option>6:00AM</option>
-					<option>7:00AM</option>
-					<option>8:00AM</option>
-					<option>9:00AM</option>
-					<option>10:00AM</option>
-					<option>11:00AM</option>
-                                     	<option>12:00PM</option>
-					<option>1:00PM</option>
-					<option>2:00PM</option>
-					<option>3:00PM</option>
-					<option>4:00PM</option>
-					<option>5:00PM</option>
-                			<option>6:00PM</option>
-					<option>7:00PM</option>
-					<option>8:00PM</option>
-					<option>9:00PM</option>
-					<option>10:0PM</option>
-					<option>11:0PM</option>
-	         	        </select>
-                           </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
-				<select class="form-control" name="status">
-					<option>Created</option>
-					<option>Approved</option>
-					<option>Advertised</option>
-					<option>Sold Out</option>
-					<option>Canceled</option>
-					<option>Completed</option>
-			        </select>
+                                <input type="text" class="form-control" name="status">
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
-                                <input required type="text" class="form-control" name="capacity">
+                                <input type="text" class="form-control" name="capacity">
+                                </select>
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Ticket Price</label>
-                                <div class="input-group mb-3">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">$</span>
-                                  </div>
-                                  <input required type="text" class="form-control" name="tickets">
-                                </div>
+                                <input type="text" class="form-control" name="ticket">
+                                </select>
                             </div>
+
+
+
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="boxify">
-                            <div class="form-group">
-                                <h3>Special Notes</h3>
-                                <label for="exampleFormControlInput1">Special Notes</label>
-                                <input required type="text" name="notes" class="form-control" >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-12"> 
                         <div class="boxify">
                             <h3>Submit form & Create Event</h3>             
