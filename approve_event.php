@@ -1,10 +1,91 @@
-<?php include 'header.php'; ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OFNI</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.php"><i class="fa fa-music"></i> OFNI <i class="fa fa-music"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="btn btn-secondary" href="index.php">Logout <i class="fa fa-cog"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" style="padding-top: 100px;">
+        <div class="flex-wrapper">
+
+        <?php
+            try {
+                $dsn = "mysql:host=courses;dbname=z1732715";
+                $username = "z1732715";
+                $password = "1996Apr23";
+                $pdo = new PDO($dsn, $username, $password);
+            }
+            catch(PDOexception $e) {
+                echo "Connection to database failed: " . $e->getMessage();
+            }
+        ?>
 
 <?php 
 
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
+        if(isset($_POST['Search']))
+        {
+            $searchData = trim($_POST['SearchBox']);
+            $sql = "SELECT * FROM Event WHERE name LIKE '%" . $searchData . "%' OR  str_Date LIKE '%" . $searchData . "%' OR  end_Date LIKE '%" . $searchData . "%' OR  time LIKE '%" . $searchData . "%' OR  street LIKE '%" . $searchData . "%' OR  city LIKE '%" . $searchData . "%' OR  state LIKE '%" . $searchData . "%' OR  zip LIKE '%" . $searchData . "%' OR  status LIKE '%" . $searchData . "%' OR  capacity LIKE '%" . $searchData . "%' OR  notes LIKE '%" . $searchData . "%' OR  tickets LIKE '%" . $searchData . "%' OR  bandId LIKE '%" . $searchData . "%';"; 
+            $getEvents = $pdo->query($sql);
+            $eventRows = $getEvents->fetchAll();
+
+            if(count($eventRows) == 0)
+            {
+                $eventSql = "SELECT * FROM Event;";
+                $getEvents = $pdo->query($eventSql);
+                $eventRows = $getEvents->fetchAll();
+
+            echo'
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <p>No search results found.</p> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ';
+
+            }
+    
+        }
         if(isset($_POST['Decline']))
         {
 
@@ -15,6 +96,12 @@
                     $result = $prepared->execute(array(':eventId' => $check));
                 }
             }
+
+
+            $eventSql = "SELECT * FROM Event;";
+            $getEvents = $pdo->query($eventSql);
+            $eventRows = $getEvents->fetchAll();
+
         }
         if(isset($_POST['Approve']))
         {
@@ -26,7 +113,16 @@
                 }
             }
 
+            $eventSql = "SELECT * FROM Event;";
+            $getEvents = $pdo->query($eventSql);
+            $eventRows = $getEvents->fetchAll();
         }
+    }
+    else
+    {
+            $eventSql = "SELECT * FROM Event;";
+            $getEvents = $pdo->query($eventSql);
+            $eventRows = $getEvents->fetchAll();
     }
 
         echo'
@@ -40,10 +136,12 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <form action="approve_event.php" method="POST">
-                            <div class="form-group">
-                            </div>
-                        </form>
+                        <div class="boxify" style="padding: 0px;">
+                            <form action="approve_event.php" method="POST"  class="form-inline mt-2 mt-md-0" style="margin-right: 0px; padding: 10px; margin-bottom: 0px; background: lightgray;">
+                                <input class="form-control mr-sm-2" type="text" name="SearchBox" aria-label="Search" style="width: 85%;">
+                                <button class="btn btn-primary my-2 my-sm-0" type="Search" name="Search" value="Search" style="width: 14%;"><i class="fa fa-search"></i> Search Events</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,18 +151,15 @@
         <section>
             <div class="container">
                 <div class="row">
-                        <div class="col-12">
+                    <div class="col-12">
+                        <div class="boxify" style="padding: 0px;">
             ';
-
-            $eventSql = "SELECT * FROM Event;";
-            $getEvents = $pdo->query($eventSql);
-            $eventRows = $getEvents->fetchAll();
 
             
             $counter = 1;
 
             echo'
-                                <table class="table boxify">
+                                <table class="table" style="margin-top: 0px; margin-bottom: 0px;">
                                   <thead class="thead-light">
                                         <tr>
                                           <th scope="col">#</th>
@@ -76,7 +171,7 @@
                                           <th scope="col">Capacity</th>
                                           <th scope="col">Event Manager</th>
                                           <th scope="col">Notes</th>
-                                          <th scope="col">Select Event</th>
+                                          <th scope="col">Select</th>
                                         </tr>
                                   </thead>
                                   <tbody class="record_table">
@@ -106,6 +201,7 @@
             echo'
                                   </tbody>
                                 </table>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -119,6 +215,7 @@
                             </div>
                         </div>
                     </div>
+            </div>
             </div>
         </section>
 
