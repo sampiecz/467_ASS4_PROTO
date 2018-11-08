@@ -124,9 +124,12 @@ echo '
 											</div>
 										</div>
                                         <div class="form-group">
-											<label for="exampleFormControlInput1" >Create an Agent</label>
+<p style="text-align: center;">
+											<label for="exampleFormControlInput1" >If you can not find your Agent you can create an Agent</label>
 											<br>
+
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">Create Agent</button>
+</p>
                                         </div>
                                     </div>
                                 </div>
@@ -276,19 +279,11 @@ echo '
                             <div class="row"> 
                                 <div class="col-12"> 
                                     <div class="boxify">
-                                        <h3>Submit Form & Create Artist</h3>             
-                                        <div class="row">
-                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                                <div class="form-group">
-                                                    <button type="create" value="create"  class="btn btn-success" style="width: 100%;">Create</button>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                                <div class="form-group">
-                                                    <a href="create_a_new_artist.php" class="btn btn-danger" style="width: 100%;">Cancel</a>
-                                                </div>
-                                            </div>
+                                        <h3 style="text-align: center; margin-bottom: 15px;">Submit Form & Create Artist</h3>             
+<p style="text-align: center;">
+                                        <a href="create_a_new_artist.php" class="btn btn-danger" style="width: 150px;">Cancel</a>
+                                        <button type="create" value="create"  class="btn btn-success" style="width: 150px; margin-left: 100px;">Create</button>
+</p>
                                         </div>
                                     </div>
                                 </div>
@@ -342,9 +337,11 @@ echo '
                         <input required type="hidden" id="AgentPhone" name="AgentPhone" value="1">
                     </div>
                 <div class="modal-footer">
-                    <div class="form-group">
-                        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        <button type="create" value="create" class="btn btn-success">Create Agent</button>
+                    <div class="form-group" style="width: 100%;">
+<p style="text-align: center;">
+                        <button type="cancel" class="btn btn-danger" style="width: 150px;" data-dismiss="modal">Cancel</button>
+                        <button type="create" style="margin-left: 100px; width: 150px;" value="create" class="btn btn-success">Create Agent</button>
+</p>
                     </div>
                 </div>
               </form>

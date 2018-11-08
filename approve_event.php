@@ -207,10 +207,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="boxify">
-                                <h2>Submit Form & Approve or Decline Event</h2>
+                                <h2 style="text-align: center; margin-bottom: 15px;">Submit Form & Approve or Decline Event</h2>
                                 <div class="form-group">
-                                    <button type="Approve" class="btn btn-success" value="Approve" name="Approve">Approve event</button>
+<p style="text-align: center;">
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Decline event</button>
+
+                                    <button type="Approve" style="margin-left: 150px;" class="btn btn-success" value="Approve" name="Approve">Approve event</button>
+</p>
                                 </div>
                             </div>
                         </div>
@@ -233,9 +236,11 @@
                 <p>Are you sure you want to decline the event?</p>
               </div>
               <div class="modal-footer">
-                <div class="form-group">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="Decline" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" name="Decline" value="Decline">Decline event</button>
+                <div class="form-group" style="width: 100%;">
+<p style="text-align: center;">
+                    <button type="button" class="btn btn-secondary" style="width: 125px;" data-dismiss="modal">Close</button>
+                    <button type="Decline" style="width: 125px; margin-left: 75px;" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter" name="Decline" value="Decline">Decline event</button>
+</p>
                 </div>
               </div>
             </div>

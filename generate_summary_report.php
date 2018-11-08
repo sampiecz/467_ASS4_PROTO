@@ -161,21 +161,13 @@
                 <div class="boxify">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Submit Form & Generate Report</h2>
+                            <h2 style="text-align: center; margin-bottom: 15px;">Submit Form & Generate Report</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                            <div class="form-group">
-                                <a href="generate_summary_report.php" class="btn btn-danger" style="width: 100%;">Cancel</a>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success" style="width: 100%;">Create</button>
-                            </div>
-                        </div>
-                    </div>
+<p style="text-align: center;">
+                                <a href="generate_summary_report.php" class="btn btn-danger" style="width: 125px;">Cancel</a>
+                                <button type="submit" class="btn btn-success" style="width: 125px; margin-left: 75px;">Create</button>
+</p>
                 </div>
             </div>
         </section>

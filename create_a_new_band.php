@@ -60,7 +60,7 @@
 							<hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="boxify">
+                                    <div class="boxify" style="height: 402px;">
                                         <div class="form-group ">
                                             <h3>Band Members</h3>
                                             <label for="exampleFormControlInput1">Member title</label>
@@ -193,7 +193,7 @@
 									</div>
                                 </div>
                                 <div class="col-6">
-									<div class="boxify">
+									<div class="boxify" style="height: 451px;">
 										<div class="form-group ">
 											<h3>Agent Contact Information</h3>
 											<label for="exampleFormControlInput1">Email</label>
@@ -222,10 +222,12 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="boxify">
-							<h2>Submit Form & Create Band</h2>
+							<h2 style="text-align: center; margin-bottom: 15px;">Submit Form & Create Band</h2>
 							<div class="form-group">
-								<button type="submit" class="btn btn-success">Create Band</button>
-								<a href="create_a_new_band.php" class="btn btn-danger">Cancel</a>
+                                <p style="text-align: center;">
+                                    <a href="create_a_new_band.php" style="width: 125px;" class="btn btn-danger">Cancel</a>
+                                    <button type="submit" style="width: 125px; margin-left: 75px;" class="btn btn-success">Create Band</button>
+                                </p>
 							</div>
 						</div>
 					</div>

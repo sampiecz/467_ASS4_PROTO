@@ -297,19 +297,11 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                 <div class="row">
                     <div class="col-12"> 
                         <div class="boxify">
-                            <h3>Submit form & Create Event</h3>             
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <button type="create" class="btn btn-success" style="width: 100%;">Create</button>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <button type="cancel" class="btn btn-danger" style="width: 100%;">Cancel</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3 style="text-align: center; margin-bottom: 15px;">Submit form & Create Event</h3>             
+<p style="text-align: center;">
+                                <button type="cancel" class="btn btn-danger" style="width: 125px;">Cancel</button>
+                                <button type="create" class="btn btn-success" style="width: 125px; margin-left: 75px;">Create</button>
+</p>
                         </div>
                     </div>
                 </div>

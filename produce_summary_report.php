@@ -79,9 +79,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="boxify">
-                                <h2>Print Report</h2>
+                                <h2 style="text-align: center;">Print Report</h2>
                                 <div class="form-group">
-                                    <a href="javascript:window.print()" class="btn btn-secondary" >Print <i class="fa fa-print"></i></a>
+<p style="text-align: center;">
+                                    <a href="javascript:window.print()" style="width: 125px;" class="btn btn-secondary" >Print <i class="fa fa-print"></i></a>
+</p>
                                 </div>
                             </div>
                         </div>
