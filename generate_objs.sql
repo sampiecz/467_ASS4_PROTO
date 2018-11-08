@@ -66,7 +66,9 @@ CREATE TABLE Event
     notes Char(255),
     bandId int,
     artistId int,
+    managerId int,
     primary key (eventId),
+    FOREIGN KEY (managerId) REFERENCES Manager (managerId),
     FOREIGN KEY (bandId) REFERENCES Band (bandId),
     FOREIGN KEY (artistId) REFERENCES Artist (artistId)
 );
