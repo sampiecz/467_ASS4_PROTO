@@ -1,11 +1,11 @@
 <?php include 'header_logout.php'; ?>
 
 	<?php
-		$username = trim($_POST['username']);
-		$password = trim($_POST['password']);
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
+            $username = trim($_POST['username']);
+            $password = trim($_POST['password']);
 
 			if($username == 'EventStaff' && $password == 'EventStaff_password')
 			{
@@ -64,23 +64,36 @@
 			if($username == 'EventManager' && $password == 'EventManager_password')
 			{
                 echo'
-					<section>
+                    <section>
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
 									<div class="jumbotron jumbotron-fluid outlier-jumbo">
 									  <div class="container">
-										<div class="row">
+                                        <div class="row">
 											<div class="col-12">
-												<h2>Approve events</h2>
+												<h2>Approve Events and Generate Reports</h2>
 												<hr>
 											</div>
-											<div class="col-12">
+                                        </div>
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-sm-12">
 												<div class="card">
+                                                  <img class="card-img-top" src="img/thumbsup.jpg"/>
 												  <div class="card-body">
-													<h5 class="card-title">Approve an event</h5>
+													<h5 class="card-title">Approve an Event</h5>
 													<p class="card-text">Quickly and easily view all event information. Including but not limited to vendors, artists, and bands.</p>
-													<a href="create_a_new_artist.php" class="btn btn-primary">Approve an event</a>
+													<a href="approve_event.php" class="btn btn-primary">Approve an event</a>
+												  </div>
+												</div>    
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="card" style="min-height: 178px;">
+                                                  <img class="card-img-top" src="img/generatereport.jpg"/>
+												  <div class="card-body">
+													<h5 class="card-title">Generate Event Status Report</h5>
+													<p class="card-text">See the status of all events added by Event Staff. Quickly generate a report on them and print it.</p>
+													<a href="generate_summary_report.php" class="btn btn-primary">Generate a report</a>
 												  </div>
 												</div>    
 											</div>
@@ -91,6 +104,7 @@
 							</div>
 						</div>
 					</section>
+
                 ';
 
 			}
@@ -104,6 +118,28 @@
 			}
 
 		}
+        else
+        {
+        
+            echo'
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Please login</h1>
+                            <hr>
+                            <p style="text-align: center;">
+                                <a href="login.php" class="btn btn-primary" style="text-align: center;">Go To Login</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            ';
+
+        }
 ?>
 
 <?php include 'footer.php'; ?>

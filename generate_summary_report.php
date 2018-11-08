@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>Generate Summary Report</h1>
+                        <h1>Generate Event Status Report</h1>
                         <hr>
                     </div>
                 </div>
@@ -15,11 +15,30 @@
             <div class="container">
                 <form method="post" action="">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-3">
                             <div class="boxify">
                                 <div class="form-group">
-                                    <label for="date">Filter by Date</label>
-                                    <input type="text" name="date" class="form-control" id="datepicker" >
+                                    <label for="date">Start Date</label>
+                                    <div class="input-group mb-3">
+                                      <input type="text" name="StartDate" class="form-control" id="datepicker1" >
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="boxify">
+                                <div class="form-group">
+                                    <label for="date">End Date</label>
+                                    <div class="input-group mb-3">
+                                      <input type="text" name="EndDate" class="form-control" id="datepicker2" >
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
+                                      </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -27,9 +46,13 @@
                             <div class="boxify">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Filter by Status</label>
-                                    <!-- Make this a calendar date picker -->
-                                    <select class="form-control">
-                                        <option>1</option>
+                                    <select class="form-control" name="status">
+                                        <option>Created</option>
+                                        <option>Approved</option>
+                                        <option>Advertised</option>
+                                        <option>Sold Out</option>
+                                        <option>Canceled</option>
+                                        <option>Completed</option>
                                     </select>
                                 </div>
                             </div>
@@ -50,7 +73,7 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                             <div class="form-group">
-                                <button type="cancel" class="btn btn-danger" style="width: 100%;">Cancel</button>
+                                <a href="generate_summary_report.php" class="btn btn-danger" style="width: 100%;">Cancel</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
@@ -67,6 +90,5 @@
                 </div>
             </div>
         </section>
-
 
 <?php include 'footer.php'; ?>

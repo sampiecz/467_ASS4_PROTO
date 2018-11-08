@@ -29,11 +29,7 @@
         }
     }
 
-    else
-    {
-
         echo'
-        <form action="approve_event.php" method="POST">
         <section>
             <div class="container">
                 <div class="row">
@@ -42,9 +38,18 @@
                         <hr>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form action="approve_event.php" method="POST">
+                            <div class="form-group">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <form action="approve_event.php" method="POST">
         <section>
             <div class="container">
                 <div class="row">
@@ -122,7 +127,6 @@
               </div>
               <div class="modal-body">
                 <p>Are you sure you want to decline the event?</p>
-                <p>This action can not be reversed.</p>
               </div>
               <div class="modal-footer">
                 <div class="form-group">
@@ -137,8 +141,6 @@
 
         </form>
     ';
-
-    }
 
 ?>
 

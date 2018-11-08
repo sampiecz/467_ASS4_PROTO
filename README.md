@@ -4,6 +4,8 @@
 - [x] Event staff
 - [x] CO
 - [x] One dropdown
+- [ ] Event Staff, COO, and Event Manager can generate summary report (specific date range) List event by status (How many tickets have been sold so far and monitor the expected revenue from ticket sale)  
+- [ ] How many tickets have been sold in order to 30% commision
 - [ ] Three different dashboard
 - [ ] Event staff will have create artist band and agent
 - [ ] Event manager will have approve event and detailed report

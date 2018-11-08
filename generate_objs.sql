@@ -10,8 +10,7 @@
 ###########################################################
 
 DROP TABLE IF EXISTS Event;
-DROP TABLE IF EXISTS Artist;
-DROP TABLE IF EXISTS Band;
+DROP TABLE IF EXISTS Artist; DROP TABLE IF EXISTS Band;
 DROP TABLE IF EXISTS Agent;
 DROP TABLE IF EXISTS BandMember;
 DROP TABLE IF EXISTS Manager;
@@ -72,7 +71,6 @@ CREATE TABLE Event
     FOREIGN KEY (bandId) REFERENCES Band (bandId),
     FOREIGN KEY (artistId) REFERENCES Artist (artistId)
 );
-
 
 CREATE TABLE Agent 
 (
