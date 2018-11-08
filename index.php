@@ -79,6 +79,8 @@
 							</div>
 							<div class="col-12">
 								<div class="card">
+                                  <img class="card-img-top" src="img/thumbsup.jpg"/>
+								  <div class="card-body">
 								  <div class="card-body">
 									<h5 class="card-title">Approve an event</h5>
 									<p class="card-text">Quickly and easily view all event information. Including but not limited to vendors, artists, and bands.</p>
