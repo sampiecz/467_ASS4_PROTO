@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS Event;
 DROP TABLE IF EXISTS Artist; DROP TABLE IF EXISTS Band;
 DROP TABLE IF EXISTS Agent;
 DROP TABLE IF EXISTS BandMember;
+DROP TABLE IF EXISTS Manager;
 
 CREATE TABLE Artist 
 (
@@ -64,7 +65,9 @@ CREATE TABLE Event
     notes Char(255),
     bandId int,
     artistId int,
+    managerId int,
     primary key (eventId),
+    FOREIGN KEY (managerId) REFERENCES Manager (managerId),
     FOREIGN KEY (bandId) REFERENCES Band (bandId),
     FOREIGN KEY (artistId) REFERENCES Artist (artistId)
 );
@@ -75,6 +78,14 @@ CREATE TABLE Agent
     agentName Char(255),
     primary key (agentId)
 );
+
+CREATE TABLE Manager
+(
+        managerId integer AUTO_INCREMENT,
+        managerName Char(255),
+        primary key (managerId) 
+);
+
 
 #CREATE TABLE BandMember 
 #(
@@ -96,6 +107,12 @@ CREATE TABLE Agent
 #    zip_code int,
 #
 #);
+
+
+INSERT INTO Manager (managerName) VALUES
+('Dog The Bounty Hunter'),
+('Christ, the lord our savior'),
+('Guldan');
 
 INSERT INTO Agent (agentName) VALUES
 ('Bob Ross'),
