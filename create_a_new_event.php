@@ -35,7 +35,16 @@ echo '
                                         echo '<option value="' . $row['artistId'] . '" >' . $row['first_name'] . '</option>';
                                         endforeach;
 
-echo '
+
+$getBandSql = "SELECT * FROM Band;";
+$getBandSqlPDO = $pdo->query($getBandSql);
+$bandRows = $getBandSqlPDO->fetchAll();
+
+ 
+
+
+
+                                echo '
 
                                 </select>
                             </div>
@@ -48,10 +57,16 @@ echo '
                             <div class="form-group">
                                 <h3>Band </h3>
                                 <label for="exampleFormControlInput1">Enter Band </label>
-                                <input type="text"  class="form-control" name="name_Band">
-                                    <!-- Php goes here -->
-                                    <option>Thing</option>
-                                </select>
+                                   <select required name="bandId" class="form-control">'; 
+                                 foreach($bandRows as $row):
+                                        echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
+                                        endforeach;
+
+                               
+
+                        echo '
+
+                              </select>
                             </div>
                         </div>
                     </div>
@@ -102,14 +117,23 @@ echo '
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
-                                <select class="form-control" name="status">
+                                <input type="text" class="form-control" name="status">
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Seating Capacity</label>
-                                <select class="form-control" name="capacity">
+                                <input type="text" class="form-control" name="capacity">
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Ticket Price</label>
+                                <input type="text" class="form-control" name="ticket">
+                                </select>
+                            </div>
+
+
+
                         </div>
                     </div>
                     <div class="col-12"> 
