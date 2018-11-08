@@ -115,4 +115,4 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 
 
 INSERT INTO Event (name, str_Date, end_Date, street, city, state, zip, status, capacity, event_Manager, notes, bandId, artistId) VALUES
-("Event name", "Start Date", "End Date", "Street", "City", "State", "Zip", "Capacity", "Event Manager", "Notes", 1, 1);
+("Event name", "Start Date", "End Date", "Street", "City", "State", "Zip", "Status", "Capacity", "Event Manager", "Notes", 1, 1);
