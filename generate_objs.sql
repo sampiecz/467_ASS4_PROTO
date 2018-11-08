@@ -114,19 +114,33 @@ CREATE TABLE Agent
 
 
 INSERT INTO Manager (managerName) VALUES
-('Dog The Bounty Hunter'),
-('Christ, the lord our savior'),
+('Mr.Egg'),
+('Jose'),
+('THANOS'),
+('Jaina'),
+('Hunter'),
+('Christ'),
 ('Guldan');
 
 INSERT INTO Agent (agentName) VALUES
 ('Bob Ross'),
-('Jam Baxton II');
+('Ja Baton II'),
+('Barbie Goldfinger'),
+('Donald Baxton II'),
+('Hello Christ'),
+('Sam Piecz'),
+('Philip Daddy'),
+('Gods Plan');
+
+
+
+
 
 INSERT INTO Artist (first_name, middle_name, last_name, gender, street, city, state, zip, email, phone_number, pricing) VALUES
-('Phil1', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
-('Phil2', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
-('Phil3', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975'),
-('Phil4', 'A', 'Boffa', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'philip@gmail.com', '6303622975');
+('Freaky', 'A', 'Ying', 'M', 'Male', 'Some street', 'Some city', 'Some State', 'Some zip', 'Vegita@gmail.com', '6303334444'),
+('Sam', 'A', 'Floriczek', 'P', 'Male', 'Tinker Ave', 'Chicago', 'NY', '66666', 'Helen@gmail.com', '6304445555'),
+('Felica', 'A', 'Deat', 'D', 'Female', 'Lucinda Ave', 'Houston', 'CL', '67676', 'sam@gmail.com', '6305556666'),
+('Madyson', 'A', 'Rock', 'Q', 'Female', 'Califonia Ave', 'Dallas', 'IL', '23423', 'phi@gmail.com', '6307779898');
 
 INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, ag_Zip, ag_Email, ag_Phone) VALUES
 ('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),
@@ -134,5 +148,5 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 
 INSERT INTO Event (name, str_Date, end_Date, time, street, city, state, zip, status, capacity, notes, tickets, bandId, artistId, managerId) VALUES 
 ("Event name", "Start Date", "End Date", "12:00", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "Tickets", 1, 1, 1),
-("2vent name", "Start 2ate", "End 2ate", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "2apacity", "2otes", "Ti2kets", 1, 1, 1),
-("3vent name", "3tart Date", "3nd Date", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "3apacity", "3otes", "3ickets", 1, 1, 1);
+("Diamond", "Start 2ate", "End 2ate", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "2apacity", "2otes", "Ti2kets", 1, 1, 1),
+("Party", "3tart Date", "3nd Date", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "3apacity", "3otes", "3ickets", 1, 1, 1);
