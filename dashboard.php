@@ -111,10 +111,39 @@
 
 			if($username == 'COO' && $password == 'COO_password')
 			{
-                // Put the summary report code here in an echo statement once the UI has been done.
-				// Or perhaps a cleaner way of doing this is to write it in another file and include it
-				// Kinda like we have done for footer and header. But fuck it lets just get it done
-				// for now. 
+                echo'
+                    <section>
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="jumbotron jumbotron-fluid outlier-jumbo">
+									  <div class="container">
+                                        <div class="row">
+											<div class="col-12">
+												<h2>Generate Event Status Report</h2>
+												<hr>
+											</div>
+                                        </div>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="card">
+                                                  <img class="card-img-top" src="img/generatereport.jpg"/>
+												  <div class="card-body">
+													<h5 class="card-title">Generate Event Status Report</h5>
+													<p class="card-text">See the status of all events added by Event Staff. Quickly generate a report on them and print it.</p>
+													<a href="generate_summary_report.php" class="btn btn-primary">Generate a report</a>
+												  </div>
+												</div>    
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</section>
+                ';
+
 			}
 
 		}

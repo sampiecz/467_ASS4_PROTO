@@ -64,10 +64,6 @@
     <form method="post" action="produce_summary_report.php"> 
         <section>
             <div class="container">
-<<<<<<< HEAD
-                <form method="post" action="phil_gen_rep.php">
-=======
->>>>>>> 28691259dca4535a77e9c828b4ba6d57b5fe9dfa
                     <div class="row">
                         <div class="col-3">
                             <div class="boxify">
@@ -119,37 +115,26 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12">
-											<div class="form-check">
+                                            <div class="form-check">
 												<label>
-													<input type="checkbox" name="Artist"> <span class="label-text">Artist</span>
+													<input type="checkbox" onclick="toggle(this)" name="select-all" id="select-all" id="checkbox-4"> <span class="label-text">All</span>
 												</label>
 											</div>
-											<div class="form-check">
+                                            <div class="form-check">
 												<label>
-													<input type="checkbox" name="Band" id="checkbox-1"> <span class="label-text">Band</span>
+													<input type="checkbox" name="select-all" id="toggle" id="checkbox-4"> <span class="label-text">Event Id</span>
 												</label>
 											</div>
-											<div class="form-check">
+                                            <div class="form-check">
 												<label>
-													<input type="checkbox" name="EventManager" id="checkbox-2"> <span class="label-text">Event Manager</span>
+													<input type="checkbox" name="select-all" id="toggle" id="checkbox-4"> <span class="label-text">Event Status</span>
 												</label>
 											</div>
-											<div class="form-check">
+                                            <div class="form-check">
 												<label>
-													<input type="checkbox" name="TicketPrice" id="checkbox-3"> <span class="label-text">Ticket Price</span>
+													<input type="checkbox" name="select-all" id="toggle" id="checkbox-4"> <span class="label-text">Tickets</span>
 												</label>
 											</div>
-											<div class="form-check">
-												<label>
-													<input type="checkbox" name="select-all" id="select-all" id="checkbox-4"> <span class="label-text">All</span>
-												</label>
-											</div>
-					<div class="form-check">
-												<label>
-													<input type="checkbox" name="select-all" id="select-all" id="checkbox-4"> <span class="label-text">All</span>
-												</label>
-											</div>
-
                                         </div>
                                     </div>
                                     <div class="row">
@@ -198,26 +183,12 @@
                 </form>
 
 <script language="JavaScript">
-	// Listen for click on toggle checkbox
-	$('#select-all').click(function(event) {   
-		if(this.checked) {
-			// Iterate each checkbox
-			$(':checkbox').each(function() {
-				this.checked = true;                        
-			});
-		} else {
-			$(':checkbox').each(function() {
-				this.checked = false;                       
-			});
-		}
-	});
-//Event Id
-//Event Name
-//Location
-//Date 
-//Time
-//Contact For Band or Artist
-
+            function toggle(source) {
+                  checkboxes = document.getElementsByClassName('toggle');
+                    for(var i=0, n=checkboxes.length;i<n;i++) {
+                            checkboxes[i].checked = source.checked;
+                              }
+            }
 </script>
 
 <?php include 'footer.php'; ?>
