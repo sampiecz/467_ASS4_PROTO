@@ -7,12 +7,24 @@
     {
         if(isset($_POST['Decline']))
         {
-            $sql = "UPDATE Event SET";
-            $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-            $result = $prepared->execute(array(':agentName' => $agentName));
+
+            if(!empty($_POST['check_list'])) {
+                foreach($_POST['check_list'] as $check) {
+                    $sql = "UPDATE Event SET status = 'Declined' WHERE eventId = :eventId ";
+                    $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+                    $result = $prepared->execute(array(':eventId' => $check));
+                }
+            }
         }
         if(isset($_POST['Approve']))
         {
+            if(!empty($_POST['check_list'])) {
+                foreach($_POST['check_list'] as $check) {
+                    $sql = "UPDATE Event SET status = 'Approved' WHERE eventId = :eventId ";
+                    $prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+                    $result = $prepared->execute(array(':eventId' => $check));
+                }
+            }
 
         }
     }
@@ -74,8 +86,9 @@
                                         .     '<td>' . $row['capacity'] . '</td>'
                                         .     '<td>' . $row['event_Manager'] . '</td>'
                                         .     '<td>' . $row['notes'] . '</td>'
-                                        .     '<td><input value="' . $row['eventId'] . '" class="form-control" type="checkbox" /></td>' .
+                                        .     '<td><input value="' . $row['eventId'] . '" class="form-control" type="checkbox" name="check_list[]" /></td>' .
                                        '</tr>';
+                                            $counter++;
                                         endforeach;
 
             echo'
@@ -85,9 +98,12 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="form-group">
-                                <button type="Approve" class="btn btn-success" value="Approve" name="Approve">Approve event</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Decline event</button>
+                            <div class="boxify">
+                                <h2>Submit Form & Approve or Decline Event</h2>
+                                <div class="form-group">
+                                    <button type="Approve" class="btn btn-success" value="Approve" name="Approve">Approve event</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Decline event</button>
+                                </div>
                             </div>
                         </div>
                     </div>
