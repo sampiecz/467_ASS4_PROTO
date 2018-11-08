@@ -82,7 +82,7 @@ echo '
                             <div class="form-group">
                                 <h3>Artist </h3>
                                 <label for="exampleFormControlInput1">Enter Artist </label>
-                                <select  name="artistId" class="form-control">
+                                <select required  name="artistId" class="form-control">
                                    <option value="">Please select an option</option>
 ';
 
@@ -108,7 +108,7 @@ $bandRows = $getBandSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Band </h3>
                                 <label for="exampleFormControlInput1">Enter Band </label>
-                                   <select  name="bandId" class="form-control">
+                                   <select required  name="bandId" class="form-control">
                                        <option value="">Please select an option</option>
 '; 
                                  foreach($bandRows as $row):
@@ -131,7 +131,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Manager</h3>
                                 <label for="exampleFormControlInput1">Enter event name</label>
-                                <select  name="managerId" class="form-control">
+                                <select required  name="managerId" class="form-control">
                                     <option value="">Please select an option</option>
 ';
 
@@ -159,7 +159,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">State</label>
-                                <select class="form-control" name="state">
+                                <select required class="form-control" name="state">
                                     <option value="">Please select an option</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
@@ -235,7 +235,7 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
-				<select class="form-control" name="status">
+				<select required class="form-control" name="status">
                     <option value="">Please select an option</option>
 					<option>Created</option>
 					<option>Approved</option>

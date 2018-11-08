@@ -46,7 +46,7 @@
                             <div class="boxify">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Filter by Status</label>
-                                    <select class="form-control" name="status">
+                                    <select required class="form-control" name="status">
                                         <option value="">Please select an option</option>
                                         <option value="Created">Created</option>
                                         <option value="Approved">Approved</option>

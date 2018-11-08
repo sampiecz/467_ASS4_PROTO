@@ -56,9 +56,14 @@
                         <div class="col-12">
             ';
 
-            $sql = "SELECT * FROM Event;";
-            $getEvents = $pdo->query($sql);
+            $eventSql = "SELECT * FROM Event;";
+            $getEvents = $pdo->query($eventSql);
             $eventRows = $getEvents->fetchAll();
+
+            $managerSql = "SELECT * FROM Manager;";
+            $getEvents = $pdo->query($eventSql);
+            $eventRows = $getEvents->fetchAll();
+
             $counter = 1;
 
             echo'
