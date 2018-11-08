@@ -62,8 +62,8 @@ CREATE TABLE Event
     zip Char(255),
     status Char(255), 
     capacity Char(255),
-    event_Manager Char(255),
     notes Char(255),
+    tickets Char(255),
     bandId int,
     artistId int,
     managerId int,
@@ -131,6 +131,6 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 ('Sam', 'West', '500', '3453334323', 'idc ave', 'Lisle', 'OK', '56044', 'fuck@gmail.com', '4561234567');
 
 
-INSERT INTO Event (name, str_Date, end_Date, street, city, state, zip, status, capacity, event_Manager, notes, bandId, artistId) VALUES
+INSERT INTO Event (name, str_Date, end_Date, street, city, state, zip, status, capacity, managerName, notes, bandId, artistId) VALUES
 ("Event name", "Start Date", "End Date", "Street", "City", "State", "Zip", "Status", "Capacity", "Event Manager", "Notes", 1, 1),
 ("Eve2t name", "St2rt Date", "End D2te", "Str2et", "C2ty", "Sta2e", "Z2p", "Stat2s", "Capacit2", "Event Manage2", "Notes2", 1, 1);

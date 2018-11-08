@@ -33,22 +33,9 @@
 
                 $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, status, capacity, artistId, bandId, managerId, notes, tickets) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                 $query = $pdo->prepare($q);
-                $results = $query->execute(array($Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity, $ArtistId, $BandID, $ManagerId, $Notes, $Tickets));
+                $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Status, $Capacity, $ArtistId, $BandId, $ManagerId, $Notes, $Tickets));
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $getArtistSql = "SELECT * FROM Artist;";
 $getArtistSqlPDO = $pdo->query($getArtistSql);
@@ -216,11 +203,11 @@ $managerRows = $getManagerSqlPDO->fetchAll();
                             <div class="form-group">
                                 <h3>Event Date</h3>
                                 <label for="exampleFormControlInput1">Start Date</label>
-                                <input type="text" name="start_date" class="form-control" id="datepicker1" >
+                                <input type="text" name="str_Date" class="form-control" id="datepicker1" >
                             </div>
                              <div class="form-group">
                                  <label for="exampleFormControlInput1">End Date</label>
-                                 <input type="text" name="end_date" class="form-control" id="datepicker2" >
+                                 <input type="text" name="end_Date" class="form-control" id="datepicker2" >
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Status</label>
