@@ -60,7 +60,8 @@
             </div>
         </section>
 
-    <form method="post" action="produce_summary_report.php">
+    <!-- <form method="post" action="produce_summary_report.php"> -->
+    <form method="post" action="phil_gen_rep.php"> 
         <section>
             <div class="container">
                     <div class="row">
@@ -69,7 +70,7 @@
                                 <div class="form-group">
                                     <label for="date">Start Date</label>
                                     <div class="input-group mb-3">
-                                      <input type="text" name="StartDate" class="form-control" id="datepicker1" >
+                                      <input type="text" name="StartDate" class="form-control" id="datepicker1" value>
                                       <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span>
                                       </div>
@@ -95,7 +96,7 @@
                             <div class="boxify">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Filter by Status</label>
-                                    <select required class="form-control" name="status">
+                                    <select class="form-control" name="status">
                                         <option value="">Please select an option</option>
                                         <option value="Created">Created</option>
                                         <option value="Approved">Approved</option>
