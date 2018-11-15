@@ -121,27 +121,27 @@
                                         <div class="col-12">
                                             <div class="form-check">
 												<label>
-													<input type="checkbox" checked name="select-all" id="toggle" id="checkbox-1"> <span class="label-text">Event Id</span>
+													<input type="checkbox" checked name="eventId?" id="toggle" id="checkbox-1"> <span class="label-text">Event Id</span>
 												</label>
 											</div>
                                             <div class="form-check">
 												<label>
-													<input type="checkbox" checked name="select-all" id="toggle" id="checkbox-2"> <span class="label-text">Status</span>
+													<input type="checkbox" checked name="status?" id="toggle" id="checkbox-2"> <span class="label-text">Status</span>
 												</label>
 											</div>
                                             <div class="form-check">
 												<label>
-													<input type="checkbox" checked name="select-all" id="toggle" id="checkbox-3"> <span class="label-text">Capacity</span>
+													<input type="checkbox" checked name="capacity?" id="toggle" id="checkbox-3"> <span class="label-text">Capacity</span>
 												</label>
 											</div>
                                             <div class="form-check">
 												<label>
-													<input type="checkbox" checked name="select-all" id="toggle" id="checkbox-4"> <span class="label-text">Tickets Sold</span>
+													<input type="checkbox" checked name="ticketsSold?" id="toggle" id="checkbox-4"> <span class="label-text">Tickets Sold</span>
 												</label>
 											</div>
                                             <div class="form-check">
 												<label>
-													<input required type="checkbox" checked name="select-all" id="toggle" id="checkbox-4"> <span class="label-text">Profit</span>
+													<input type="checkbox" checked name="profit?" id="toggle" id="checkbox-4"> <span class="label-text">Profit</span>
 												</label>
 											</div>
                                         </div>
@@ -158,13 +158,12 @@
                                         <div class="col-12">
 <div class="form-check">
                                     <label>
-                                        <input type="radio" checked name="select-all" id="toggle" id="radio-1"> <span class="label-text">Summary</span>
-                                    </label>
+                                        <input type="radio" checked name="type" id="toggle" id="radio-1" value="summary"> <span class="label-text">Summary</span> </label>
                                 </div>
 
                                 <div class="form-check">
                                     <label>
-                                        <input type="radio" name="select-all" id="toggle" id="radio-2"> <span class="label-text">Detailed</span>
+                                        <input type="radio" name="type" id="toggle" id="radio-2" value="detailed"> <span class="label-text">Detailed</span>
                                     </label>
                                 </div>
                                                             </div>
