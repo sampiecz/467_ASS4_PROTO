@@ -64,7 +64,7 @@
                                         <div class="form-group ">
                                             <h3>Band Members</h3>
                                             <label for="exampleFormControlInput1">Member title</label>
-                                             <select required required class="form-control" name='members'>
+                                             <select required required required class="form-control" name='members'>
 												<option value="">Please select an option</option>
                                                 <option>Band Leader</option>
                                                 <option>Drummer</option>
@@ -77,7 +77,7 @@
 											  <div class="input-group-prepend">
 												<span class="input-group-text" id="basic-addon1">$</span>
 											  </div>
-                                              <input required type="text" class="form-control" name="rate" >
+                                              <input required required type="text" class="form-control" name="rate" >
 											</div>
 
                                         </div>
@@ -92,7 +92,7 @@
                                         <div class="form-group ">
                                             <h3>Band Name</h3>		
                                             <label for="exampleFormControlInput1">Enter band name</label>
-                                            <input required type="text" class="form-control" name="bandname" >
+                                            <input required required type="text" class="form-control" name="bandname" >
                                         </div>
                                     </div>
                                     <div class="boxify">
@@ -103,7 +103,7 @@
 											  <div class="input-group-prepend">
 												<span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
 											  </div>
-                                              <input required type="phone" class="form-control" name="bl_Number" >
+                                              <input required required type="phone" class="form-control" name="bl_Number" >
 											</div>
                                         </div>
                                     </div>
@@ -123,15 +123,15 @@
 										<div class="form-group ">
 											<h3>Address</h3>
 											<label for="exampleFormControlInput1">Street</label>
-											<input required type="text" class="form-control" name="ag_Street" >
+											<input required required type="text" class="form-control" name="ag_Street" >
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">City</label>
-											<input required type="text" class="form-control" name="ag_City" >
+											<input required required type="text" class="form-control" name="ag_City" >
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">State</label>
-											<select required required class="form-control" name="ag_State">
+											<select required required required class="form-control" name="ag_State">
 												<option value="">Please select an option</option>
 												<option value="AL">Alabama</option>
 												<option value="AK">Alaska</option>
@@ -188,7 +188,7 @@
 										</div>
 										<div class="form-group ">
 											<label for="exampleFormControlInput1">Zip Code</label>
-											<input required type="text" class="form-control" name="ag_ZipCode" >
+											<input required required type="text" class="form-control" name="ag_ZipCode" >
 										</div>
 									</div>
                                 </div>
@@ -201,7 +201,7 @@
 											  <div class="input-group-prepend">
 												<span class="input-group-text" id="basic-addon1">@</span>
 											  </div>
-											  <input required type="text" class="form-control" name="ag_Email" >
+											  <input required required type="text" class="form-control" name="ag_Email" >
 											</div>
 										</div>
 										<div class="form-group ">
@@ -210,7 +210,7 @@
 											  <div class="input-group-prepend">
 												<span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
 											  </div>
-											  <input required type="phone" class="form-control" name="ag_Phone" >
+											  <input required required type="phone" class="form-control" name="ag_Phone" >
 											</div>
 										</div>
 									</div>

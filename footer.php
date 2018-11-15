@@ -1,7 +1,7 @@
 <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2018-2019 OFNI.</p>
+        <p>&copy; 2018-2019 GEMS.</p>
       </footer>
       </div>
     </main>

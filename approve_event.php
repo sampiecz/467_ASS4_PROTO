@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OFNI</title>
+    <title>GEMS</title>
 
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,7 +19,7 @@
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="index.php"><i class="fa fa-music"></i> OFNI <i class="fa fa-music"></i></a>
+        <a class="navbar-brand" href="index.php"><i class="fa fa-diamond"></i> GEMS <i class="fa fa-diamond"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -138,7 +138,7 @@
                     <div class="col-12">
                         <div class="boxify" style="padding: 0px;">
                             <form action="approve_event.php" method="POST"  class="form-inline mt-2 mt-md-0" style="margin-right: 0px; padding: 10px; margin-bottom: 0px; background: lightgray;">
-                                <input class="form-control mr-sm-2" type="text" name="SearchBox" aria-label="Search" style="width: 85%;">
+                                <input  class="form-control mr-sm-2" type="text" name="SearchBox" aria-label="Search" style="width: 85%;">
                                 <button class="btn btn-primary my-2 my-sm-0" type="Search" name="Search" value="Search" style="width: 14%;"><i class="fa fa-search"></i> Search Events</button>
                             </form>
                         </div>

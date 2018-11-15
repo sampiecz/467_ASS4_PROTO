@@ -119,7 +119,6 @@ INSERT INTO Manager (managerName) VALUES
 ('THANOS'),
 ('Jaina'),
 ('Hunter'),
-('Christ'),
 ('Guldan');
 
 INSERT INTO Agent (agentName) VALUES
@@ -127,10 +126,8 @@ INSERT INTO Agent (agentName) VALUES
 ('Ja Baton II'),
 ('Barbie Goldfinger'),
 ('Donald Baxton II'),
-('Hello Christ'),
 ('Sam Piecz'),
-('Philip Daddy'),
-('Gods Plan');
+('Philip Boffa');
 
 
 
@@ -147,6 +144,6 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 ('Sam', 'West', '500', '3453334323', 'idc ave', 'Lisle', 'OK', '56044', 'fuck@gmail.com', '4561234567');
 
 INSERT INTO Event (name, str_Date, end_Date, time, street, city, state, zip, status, capacity, notes, tickets, bandId, artistId, managerId) VALUES 
-("Event name", "11/6/18", "11/10/18", "12:00", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "Tickets", 1, 1, 1),
-("Diamond", "11/6/18", "11/10/18", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "2apacity", "2otes", "Ti2kets", 1, 1, 1),
-("Party", "11/6/18", "11/10/18", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "3apacity", "3otes", "3ickets", 1, 1, 1);
+("Event name", "11/6/2018", "11/10/2018", "12:00", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "Tickets", 1, 1, 1),
+("Diamond", "11/6/2018", "11/10/2018", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "Approved", "2otes", "Ti2kets", 1, 1, 1),
+("Party", "11/6/2018", "11/10/2018", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "Approved", "3otes", "3ickets", 1, 1, 1);
