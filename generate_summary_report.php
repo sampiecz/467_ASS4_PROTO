@@ -141,7 +141,7 @@
 											</div>
                                             <div class="form-check">
 												<label>
-													<input type="checkbox" checked name="profit?" id="toggle" id="checkbox-4"> <span class="label-text">Profit</span>
+													<input type="checkbox" checked name="profit?" id="toggle" id="checkbox-4"> <span class="label-text">Current Revenue</span>
 												</label>
 											</div>
                                         </div>

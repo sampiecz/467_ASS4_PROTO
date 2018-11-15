@@ -36,6 +36,14 @@
     <main role="main" style="padding-top: 100px;">
         <div class="flex-wrapper">
 
+<style>
+.table td, .table th {
+    padding: 0.6rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+</style>
+
         <?php
             try {
                 $dsn = "mysql:host=courses;dbname=z1732715";

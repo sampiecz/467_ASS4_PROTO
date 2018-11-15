@@ -110,10 +110,10 @@ echo '
 ';
 
                                 foreach($artistRows as $row):
-                                        echo '<option value="' . $row['artistId'] . '" >' . $row['first_name'] . '</option>';
+                                        echo '<option value="' . $row['artistId'] . '" >Artist - ' . $row['first_name'] . '</option>';
                                 endforeach;
                                 foreach($bandRows as $row):
-                                    echo '<option value="' . $row['bandId'] . '" >' . $row['name'] . '</option>';
+                                    echo '<option value="' . $row['bandId'] . '" >Band - ' . $row['name'] . '</option>';
                                 endforeach;
 
                                 echo '
