@@ -72,6 +72,7 @@ CREATE TABLE Event
     capacity Char(255),
     notes Char(255),
     tickets Char(255),
+    tickets_sold Char(255),
     bandId int,
     artistId int,
     managerId int,
@@ -143,7 +144,7 @@ INSERT INTO Band (name, member, rate, bl_Number, ag_Street, ag_City, ag_State, a
 ('Cooler', 'Jake lee', '1000', '630282828', 'God ave', 'Naperville', 'IL', '65655', 'sijdfbkajfh@gmail.com', '6302228766'),
 ('Sam', 'West', '500', '3453334323', 'idc ave', 'Lisle', 'OK', '56044', 'fuck@gmail.com', '4561234567');
 
-INSERT INTO Event (name, str_Date, end_Date, time, street, city, state, zip, status, capacity, notes, tickets, bandId, artistId, managerId) VALUES 
-("Event name", "11/6/2018", "11/10/2018", "12:00", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "Tickets", 1, 1, 1),
-("Diamond", "11/6/2018", "11/10/2018", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "Approved", "2otes", "Ti2kets", 1, 1, 1),
-("Party", "11/6/2018", "11/10/2018", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "Approved", "3otes", "3ickets", 1, 1, 1);
+INSERT INTO Event (name, str_Date, end_Date, time, street, city, state, zip, status, capacity, notes, tickets, tickets_sold, bandId, artistId, managerId) VALUES 
+("Event name", "11/6/2018", "11/10/2018", "12:00", "Street", "City", "State", "Zip", "Status", "Capacity", "Notes", "20", "23", 1, 1, 1),
+("Diamond", "11/6/2018", "11/10/2018", "13:00", "2treet", "2ity", "2tate", "2ip", "2tatus", "Approved", "2otes", "30", "47", 1, 1, 1),
+("Party", "11/6/2018", "11/10/2018", "11:00", "3treet", "3ity", "3tate", "3ip", "3tatus", "Approved", "3otes", "50", "53", 1, 1, 1);

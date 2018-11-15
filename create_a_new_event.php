@@ -31,22 +31,23 @@
                 $ManagerId = trim($_POST['managerId']);
                 $Notes = trim($_POST['notes']);
                 $Tickets = trim($_POST['tickets']);
+                $TicketsSold = trim($_POST['tickets_sold']);
 
                 if(trim($_POST['artistId']))
                 {
                     $ArtistId = trim($_POST['artistId']);
-                    $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, time, status, capacity, artistId, bandId, managerId, notes, tickets) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                    $BandId = "1";
+                    $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, time, status, capacity, artistId, bandId, managerId, notes, tickets, tickets_sold) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     $query = $pdo->prepare($q);
-                    $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Time, $Status, $Capacity, $ArtistId, $ManagerId, $Notes, $Tickets));
-
+                    $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Time, $Status, $Capacity, $ArtistId, $BandId, $ManagerId, $Notes, $Tickets, $TicketsSold));
                 }
                 else
                 {
                     $BandId = trim($_POST['bandId']);
-                    $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, time, status, capacity, artistId, bandId, managerId, notes, tickets) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                    $ArtistId = "1";
+                    $q = "INSERT INTO Event (name, street, city, state, zip, str_Date, end_Date, time, status, capacity, artistId, bandId, managerId, notes, tickets, tickets, tickets_sold) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     $query = $pdo->prepare($q);
-                    $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Time, $Status, $Capacity, $BandId, $ManagerId, $Notes, $Tickets));
-
+                    $results = $query->execute(array($Name, $Street, $City, $State, $Zip, $Start_Date, $End_Date, $Time, $Status, $Capacity, $ArtistId, $BandId, $ManagerId, $Notes, $Tickets, $TicketsSold));
                 }
 
             echo'
@@ -296,6 +297,7 @@ echo '
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Zip Code</label>
                                 <input required type="text" class="form-control" name="zip" >
+                                <input type="hidden"  name="tickets_sold" value="99">
                             </div>
                         </div>
                     </div>
@@ -306,7 +308,7 @@ echo '
                             <h3 style="text-align: center; margin-bottom: 15px;">Submit form & Create Event</h3>             
                             <hr>
 <p style="text-align: center;">
-                                <button type="cancel" class="btn btn-danger" style="width: 125px;">Cancel</button>
+                                <a href="create_a_new_event.php" class="btn btn-danger" style="width: 125px;">Cancel</a>
                                 <button type="create" class="btn btn-success" style="width: 125px; margin-left: 75px;">Create</button>
 </p>
                         </div>
